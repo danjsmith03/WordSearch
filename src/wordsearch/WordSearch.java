@@ -90,7 +90,6 @@ public class WordSearch {
                 
                 int txtvalue = (row*NUM_COLUMNS) + col;
                 
-                if (txtvalue<40) {
                 if (((LineBorder) txt[txtvalue].getBorder()).getLineColor() == Color.RED) {
                     lettersfound++;
 
@@ -173,7 +172,7 @@ public class WordSearch {
                             JOptionPane.showMessageDialog(null, msg, "Word Search", JOptionPane.INFORMATION_MESSAGE);
                         }
                     }
-                }}
+                }
             }
         }
     }
