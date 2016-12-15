@@ -25,9 +25,9 @@ public class Start extends javax.swing.JFrame {
         rulesmsg.append("The classic Word Search game involves a 20x20 grid.\n"
                 + "There will be 16 words at the bottom of the screen that you will\n"
                 + "need to find.  Click the left mouse button and drag on the screen\n"
-                + "to select a word.  When you select a word it will turn the border\n"
-                + "of the letter red so that you know it was selected.  Once all 16\n"
-                + "words are found.  You have completed the word search.  You can click\n"
+                + "to select a word.  When you find a word it will turn the border\n"
+                + "of the letter green so that you know it was found.  Once all 16\n"
+                + "words are found you have completed the word search.  You can click\n"
                 + "the New Word Search button to start a new game or Exit to quit.");
         
         JOptionPane.showMessageDialog(null,

@@ -24,11 +24,14 @@ import javax.swing.border.LineBorder;
 public class WordSearch {
     
     private static final int TOTAL_WORDS = 16;  // Total # of word search words
-    private static final int TOTAL_OPTIONS = 4; // Total # of options (Horizontal (Reverse), Horizontal (Forward), Vertical (Bottom to Top), Vertical (Top to Bottom))
+    private static final int TOTAL_OPTIONS = 8; // Total # of options (Horizontal (Reverse), Horizontal (Forward), Vertical (Bottom to Top), Vertical (Top to Bottom),
+                                                // Diagonal (Top to Bottom, Forward and Reverse), Diagonal (Bottom to Top, Forward and Reverse))
     private static final int NUM_ROWS = 20;     // Total # of rows in the word search
     private static final int NUM_COLUMNS = 20;  // Total # of columns in the word search
+    private static final int NUM_THEMES = 6;    // Total # of themes of words
     private static final int EACH_OPTION = TOTAL_WORDS/TOTAL_OPTIONS;
     private static int WORDS_FOUND = 0;         // Total # of words found
+    private static int PUZZLE_COUNT = 0;        // Keeps track of array of words to display for next puzzle
     
     public static char[][] word_search;
     public static ArrayList<String> array_list;
@@ -37,6 +40,7 @@ public class WordSearch {
     
     private static int[] option_count;
     private static List<Integer> solution;
+    private static String theme;
     
     /**
      *Constructor.  Resets board to zeros
@@ -54,12 +58,36 @@ public class WordSearch {
         WORDS_FOUND = words_found;
     }
     
+    public static void setPuzzleCount(int puzzle_count) {
+        PUZZLE_COUNT = puzzle_count;
+    }
+    
+    public static void addToPuzzleCount() {
+        PUZZLE_COUNT++;
+    }
+    
+    public static int getPuzzleCount() {
+        return PUZZLE_COUNT;
+    }
+    
     public static int getTotalWords() {
         return TOTAL_WORDS;
     }
     
     public static int getNumColumns() {
         return NUM_COLUMNS;
+    }
+    
+    public static int getTotalThemes() {
+        return NUM_THEMES;
+    }
+    
+    public static String getTheme() {
+        return theme;
+    }
+    
+    public static void setTheme(String puzzle_theme) {
+        theme = puzzle_theme;
     }
     
     /**
@@ -230,8 +258,136 @@ public class WordSearch {
             int col = randomNumber(NUM_COLUMNS-1);
             Point[] pointArray = new Point[len];
             array_of_points[s] = new Point[len];
-        
-            if (col >= len && option_count[0] < EACH_OPTION){
+            
+            if (NUM_ROWS - row >= len && NUM_COLUMNS - col >= len && option_count[0] < EACH_OPTION) {
+                //Check to see if spaces are blank or characters are the same
+                int temp_row = row;
+                int temp_col = col;
+                boolean valid = true;
+                for (int i = 0; i < len; i++){
+                    if (word_search[temp_row][temp_col] == '\u0000' || word_search[temp_row][temp_col] == word_match.charAt(i)) {
+                    } else {
+                        valid = false;
+                        break;
+                    }
+                    temp_row++;
+                    temp_col++;
+                }
+                
+                if (valid == true) {
+                    //Diagonal (Top to Bottom - Forward)
+                    temp_row = row;
+                    temp_col = col;
+                    for (int i = 0; i < len; i++){
+                        word_search[temp_row][temp_col] = word_match.charAt(i);
+                        Point point = new Point(temp_row, temp_col);
+                        pointArray[i] = point;
+                        array_of_points[s][i] = pointArray[i];
+                        temp_row++;
+                        temp_col++;
+                    }
+                    
+                    option_count[0]++;
+                        
+                    set = true;
+                }
+            } else if (NUM_ROWS - row >= len && col >= len && option_count[1] < EACH_OPTION) {
+                //Check to see if spaces are blank or characters are the same
+                int temp_row = row;
+                int temp_col = col;
+                boolean valid = true;
+                for (int i = 0; i < len; i++){
+                    if (word_search[temp_row][temp_col] == '\u0000' || word_search[temp_row][temp_col] == word_match.charAt(i)) {
+                    } else {
+                        valid = false;
+                        break;
+                    }
+                    temp_row++;
+                    temp_col--;
+                }
+                
+                if (valid == true) {
+                    //Diagonal (Top to Bottom - Reverse)
+                    temp_row = row;
+                    temp_col = col;
+                    for (int i = 0; i < len; i++){
+                        word_search[temp_row][temp_col] = word_match.charAt(i);
+                        Point point = new Point(temp_row, temp_col);
+                        pointArray[i] = point;
+                        array_of_points[s][i] = pointArray[i];
+                        temp_row++;
+                        temp_col--;
+                    }
+                    
+                    option_count[1]++;
+                        
+                    set = true;
+                }
+            } else if (row >= len && NUM_COLUMNS - col >= len && option_count[2] < EACH_OPTION) {
+                //Check to see if spaces are blank or characters are the same
+                int temp_row = row;
+                int temp_col = col;
+                boolean valid = true;
+                for (int i = 0; i < len; i++){
+                    if (word_search[temp_row][temp_col] == '\u0000' || word_search[temp_row][temp_col] == word_match.charAt(i)) {
+                    } else {
+                        valid = false;
+                        break;
+                    }
+                    temp_row--;
+                    temp_col++;
+                }
+                
+                if (valid == true) {
+                    //Diagonal (Top to Bottom - Reverse)
+                    temp_row = row;
+                    temp_col = col;
+                    for (int i = 0; i < len; i++){
+                        word_search[temp_row][temp_col] = word_match.charAt(i);
+                        Point point = new Point(temp_row, temp_col);
+                        pointArray[i] = point;
+                        array_of_points[s][i] = pointArray[i];
+                        temp_row--;
+                        temp_col++;
+                    }
+                    
+                    option_count[2]++;
+                        
+                    set = true;
+                }
+            } else if (row >= len && col >= len && option_count[3] < EACH_OPTION) {
+                //Check to see if spaces are blank or characters are the same
+                int temp_row = row;
+                int temp_col = col;
+                boolean valid = true;
+                for (int i = 0; i < len; i++){
+                    if (word_search[temp_row][temp_col] == '\u0000' || word_search[temp_row][temp_col] == word_match.charAt(i)) {
+                    } else {
+                        valid = false;
+                        break;
+                    }
+                    temp_row--;
+                    temp_col--;
+                }
+                
+                if (valid == true) {
+                    //Diagonal (Top to Bottom - Reverse)
+                    temp_row = row;
+                    temp_col = col;
+                    for (int i = 0; i < len; i++){
+                        word_search[temp_row][temp_col] = word_match.charAt(i);
+                        Point point = new Point(temp_row, temp_col);
+                        pointArray[i] = point;
+                        array_of_points[s][i] = pointArray[i];
+                        temp_row--;
+                        temp_col--;
+                    }
+                    
+                    option_count[3]++;
+                        
+                    set = true;
+                }
+            } else if (col >= len && option_count[4] < EACH_OPTION){
                 //Check to see if spaces are blank or characters are the same
                 int temp_col = col;
                 boolean valid = true;
@@ -255,11 +411,11 @@ public class WordSearch {
                         temp_col--;
                     }
                     
-                    option_count[0]++;
+                    option_count[4]++;
                         
                     set = true;
                 }
-            } else if (NUM_COLUMNS - col >= len && option_count[1] < EACH_OPTION) {
+            } else if (NUM_COLUMNS - col >= len && option_count[5] < EACH_OPTION) {
                 //Check to see if spaces are blank or characters are the same
                 int temp_col = col;
                 boolean valid = true;
@@ -283,11 +439,11 @@ public class WordSearch {
                         temp_col++;
                     }
                     
-                    option_count[1]++;
+                    option_count[5]++;
                         
                     set = true;
                 }
-            } else if (row >= len && option_count[2] < EACH_OPTION) {
+            } else if (row >= len && option_count[6] < EACH_OPTION) {
                 //Check to see if spaces are blank or characters are the same
                 int temp_row = row;
                 boolean valid = true;
@@ -311,11 +467,11 @@ public class WordSearch {
                         temp_row--;
                     }
                     
-                    option_count[2]++;
+                    option_count[6]++;
                         
                     set = true;
                 }
-            } else if (NUM_ROWS - row >= len && option_count[3] < EACH_OPTION) {
+            } else if (NUM_ROWS - row >= len && option_count[7] < EACH_OPTION) {
                 //Check to see if spaces are blank or characters are the same
                 int temp_row = row;
                 boolean valid = true;
@@ -339,7 +495,7 @@ public class WordSearch {
                         temp_row++;
                     }
                     
-                    option_count[3]++;
+                    option_count[7]++;
                         
                     set = true;
                 }
@@ -361,25 +517,135 @@ public class WordSearch {
      * This function will generate random words.
      */
     private static void randomWords() {
-        array_list.add("APPLE");
-        array_list.add("ORANGE");
-        array_list.add("GRAPE");
-        array_list.add("STRAWBERRY");
-        array_list.add("BANANA");
-        array_list.add("WATERMELON");
-        array_list.add("KIWI");
-        array_list.add("CANTALOUPE");
-        array_list.add("HONEYDEW");
-        array_list.add("BLACKBERRY");
-        array_list.add("PEACH");
-        array_list.add("AVOCADO");
-        array_list.add("PEAR");
-        array_list.add("APRICOT");
-        array_list.add("PLUM");
-        array_list.add("CHERRY");
+        if (getPuzzleCount() >= getTotalThemes()) {
+            setPuzzleCount(0); 
+        }
+        
+        if (getPuzzleCount() == 0) {
+            setTheme("FRUITS");
+            
+            array_list.add("APPLE");
+            array_list.add("ORANGE");
+            array_list.add("GRAPE");
+            array_list.add("STRAWBERRY");
+            array_list.add("BANANA");
+            array_list.add("WATERMELON");
+            array_list.add("KIWI");
+            array_list.add("CANTALOUPE");
+            array_list.add("HONEYDEW");
+            array_list.add("BLACKBERRY");
+            array_list.add("PEACH");
+            array_list.add("AVOCADO");
+            array_list.add("PEAR");
+            array_list.add("APRICOT");
+            array_list.add("PLUM");
+            array_list.add("CHERRY");
+        }
+        else if (getPuzzleCount() == 1) {
+            setTheme("VEGETABLES");
+            
+            array_list.add("ASPARAGUS");
+            array_list.add("BROCCOLI");
+            array_list.add("CABBAGE");
+            array_list.add("CARROTS");
+            array_list.add("CAULIFLOWER");
+            array_list.add("CELERY");
+            array_list.add("FENNEL");
+            array_list.add("LETTUCE");
+            array_list.add("MUSHROOM");
+            array_list.add("ONION");
+            array_list.add("PEPPER");
+            array_list.add("POTATO");
+            array_list.add("RHUBARB");
+            array_list.add("SPINACH");
+            array_list.add("TOMATO");
+            array_list.add("ZUCCHINI");
+        }
+        else if (getPuzzleCount() == 2) {
+            setTheme("BASEBALL");
+            
+            array_list.add("BATBOY");
+            array_list.add("BULLPEN");
+            array_list.add("BUNT");
+            array_list.add("CURVEBALL");
+            array_list.add("FIELDER");
+            array_list.add("HELMET");
+            array_list.add("INFIELD");
+            array_list.add("INNING");
+            array_list.add("KNUCKLEBALL");
+            array_list.add("LINEUP");
+            array_list.add("GLOVE");
+            array_list.add("OUTFIELD");
+            array_list.add("PITCHER");
+            array_list.add("RBI");
+            array_list.add("STRIKE");
+            array_list.add("UMPIRE");
+        }
+        else if (getPuzzleCount() == 3) {
+            setTheme("BASKETBALL");
+            
+            array_list.add("ASSIST");
+            array_list.add("BACKBOARD");
+            array_list.add("BASELINE");
+            array_list.add("BENCH");
+            array_list.add("BLOCK");
+            array_list.add("CARRY");
+            array_list.add("CHARGE");
+            array_list.add("DRIBBLE");
+            array_list.add("DUNK");
+            array_list.add("FADEAWAY");
+            array_list.add("HALFTIME");
+            array_list.add("LAYUP");
+            array_list.add("PAINT");
+            array_list.add("REBOUND");
+            array_list.add("TRAVEL");
+            array_list.add("TURNOVER");
+        }
+        else if (getPuzzleCount() == 4) {
+            setTheme("FOOTBALL");
+            
+            array_list.add("BLITZ");
+            array_list.add("FUMBLE");
+            array_list.add("HANDOFF");
+            array_list.add("HUDDLE");
+            array_list.add("INTERCEPTION");
+            array_list.add("JUKE");
+            array_list.add("PUNT");
+            array_list.add("RUSH");
+            array_list.add("SAFETY");
+            array_list.add("SCRIMMAGE");
+            array_list.add("TACKLE");
+            array_list.add("TOUCHDOWN");
+            array_list.add("BLOCK");
+            array_list.add("PASS");
+            array_list.add("ENDZONE");
+            array_list.add("KICKOFF");
+        }
+        else if (getPuzzleCount() == 5) {
+            setTheme("BOXING");
+            
+            array_list.add("BOUT");
+            array_list.add("CORNER");
+            array_list.add("CROSS");
+            array_list.add("DECISION");
+            array_list.add("HEADLOCK");
+            array_list.add("GLOVE");
+            array_list.add("HOOK");
+            array_list.add("JAB");
+            array_list.add("KNOCKOUT");
+            array_list.add("LOCK");
+            array_list.add("RINGSIDE");
+            array_list.add("ROUND");
+            array_list.add("SOUTHPAW");
+            array_list.add("SPAR");
+            array_list.add("UPPERCUT");
+            array_list.add("ROPES");
+        }
         
         //Sort Array List
         Collections.sort(array_list);
+        
+        addToPuzzleCount();
     }
     
      /**
