@@ -129,6 +129,7 @@ public class Start extends javax.swing.JFrame {
         this.setVisible(false);
         
         Input input = new Input();
+        input.addMouseListener(new MoreMouseEvents());
         input.addMouseMotionListener(new MouseMotionEvent());
         input.pack();
         input.setLocationRelativeTo(null);

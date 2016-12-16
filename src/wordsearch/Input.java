@@ -11,6 +11,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
 
 /**
  * @author Daniel Smith
@@ -186,7 +187,8 @@ public class Input extends javax.swing.JFrame {
 
             //Set border if mouse dragged over a textfield
             if (pointe.x >= startx && pointe.x <= endx &&
-                pointe.y >= starty && pointe.y <= endy) {
+                pointe.y >= starty && pointe.y <= endy &&
+                ((LineBorder) txt[i-1].getBorder()).getLineColor() != Color.GREEN) {
                 Border border = BorderFactory.createLineBorder(Color.RED, 1);
                     
                 txt[i-1].setBorder(border);
@@ -241,7 +243,6 @@ public class Input extends javax.swing.JFrame {
         for(int i = 1; i <= txt.length; i++)
         {        
             txt[i-1].setText(String.valueOf(WordSearch.word_search[counter2][counter1]));
-            txt[i-1].setEditable(false);
             
             counter1 += 1;
             
@@ -721,6 +722,10 @@ public class Input extends javax.swing.JFrame {
 
         word13.setText("13");
 
+        jTextField0000.setEditable(false);
+        jTextField0000.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextField0000.setEnabled(false);
+        jTextField0000.setHighlighter(null);
         jTextField0000.setOpaque(false);
         jTextField0000.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -728,23 +733,215 @@ public class Input extends javax.swing.JFrame {
             }
         });
 
+        jTextField0001.setEditable(false);
+        jTextField0001.setDisabledTextColor(java.awt.Color.black);
+        jTextField0001.setEnabled(false);
+        jTextField0001.setHighlighter(null);
+
+        jTextField0002.setEditable(false);
+        jTextField0002.setDisabledTextColor(java.awt.Color.black);
+        jTextField0002.setEnabled(false);
+        jTextField0002.setHighlighter(null);
+
+        jTextField0003.setEditable(false);
+        jTextField0003.setDisabledTextColor(java.awt.Color.black);
+        jTextField0003.setEnabled(false);
+        jTextField0003.setHighlighter(null);
+
+        jTextField0004.setEditable(false);
+        jTextField0004.setDisabledTextColor(java.awt.Color.black);
+        jTextField0004.setEnabled(false);
+        jTextField0004.setHighlighter(null);
+
+        jTextField0005.setEditable(false);
+        jTextField0005.setDisabledTextColor(java.awt.Color.black);
+        jTextField0005.setEnabled(false);
+        jTextField0005.setHighlighter(null);
+
+        jTextField0006.setEditable(false);
+        jTextField0006.setDisabledTextColor(java.awt.Color.black);
+        jTextField0006.setEnabled(false);
+        jTextField0006.setHighlighter(null);
         jTextField0006.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0006ActionPerformed(evt);
             }
         });
 
+        jTextField0007.setEditable(false);
+        jTextField0007.setDisabledTextColor(java.awt.Color.black);
+        jTextField0007.setEnabled(false);
+        jTextField0007.setHighlighter(null);
+
+        jTextField0008.setEditable(false);
+        jTextField0008.setDisabledTextColor(java.awt.Color.black);
+        jTextField0008.setEnabled(false);
+        jTextField0008.setHighlighter(null);
+
+        jTextField0009.setEditable(false);
+        jTextField0009.setDisabledTextColor(java.awt.Color.black);
+        jTextField0009.setEnabled(false);
+        jTextField0009.setHighlighter(null);
+
+        jTextField0010.setEditable(false);
+        jTextField0010.setDisabledTextColor(java.awt.Color.black);
+        jTextField0010.setEnabled(false);
+        jTextField0010.setHighlighter(null);
+
+        jTextField0011.setEditable(false);
+        jTextField0011.setDisabledTextColor(java.awt.Color.black);
+        jTextField0011.setEnabled(false);
+        jTextField0011.setHighlighter(null);
+
+        jTextField0012.setEditable(false);
+        jTextField0012.setDisabledTextColor(java.awt.Color.black);
+        jTextField0012.setEnabled(false);
+        jTextField0012.setHighlighter(null);
+
+        jTextField0013.setEditable(false);
+        jTextField0013.setDisabledTextColor(java.awt.Color.black);
+        jTextField0013.setEnabled(false);
+        jTextField0013.setHighlighter(null);
+
+        jTextField0014.setEditable(false);
+        jTextField0014.setDisabledTextColor(java.awt.Color.black);
+        jTextField0014.setEnabled(false);
+        jTextField0014.setHighlighter(null);
+
+        jTextField0015.setEditable(false);
+        jTextField0015.setDisabledTextColor(java.awt.Color.black);
+        jTextField0015.setEnabled(false);
+        jTextField0015.setHighlighter(null);
+
+        jTextField0016.setEditable(false);
+        jTextField0016.setDisabledTextColor(java.awt.Color.black);
+        jTextField0016.setEnabled(false);
+        jTextField0016.setHighlighter(null);
+
+        jTextField0017.setEditable(false);
+        jTextField0017.setDisabledTextColor(java.awt.Color.black);
+        jTextField0017.setEnabled(false);
+        jTextField0017.setHighlighter(null);
+
+        jTextField0018.setEditable(false);
+        jTextField0018.setDisabledTextColor(java.awt.Color.black);
+        jTextField0018.setEnabled(false);
+        jTextField0018.setHighlighter(null);
+
+        jTextField0019.setEditable(false);
+        jTextField0019.setDisabledTextColor(java.awt.Color.black);
+        jTextField0019.setEnabled(false);
+        jTextField0019.setHighlighter(null);
+
+        jTextField0103.setEditable(false);
+        jTextField0103.setDisabledTextColor(java.awt.Color.black);
+        jTextField0103.setEnabled(false);
+        jTextField0103.setHighlighter(null);
+
+        jTextField0104.setEditable(false);
+        jTextField0104.setDisabledTextColor(java.awt.Color.black);
+        jTextField0104.setEnabled(false);
+        jTextField0104.setHighlighter(null);
+
+        jTextField0101.setEditable(false);
+        jTextField0101.setDisabledTextColor(java.awt.Color.black);
+        jTextField0101.setEnabled(false);
+        jTextField0101.setHighlighter(null);
+
+        jTextField0102.setEditable(false);
+        jTextField0102.setDisabledTextColor(java.awt.Color.black);
+        jTextField0102.setEnabled(false);
+        jTextField0102.setHighlighter(null);
+
+        jTextField0109.setEditable(false);
+        jTextField0109.setDisabledTextColor(java.awt.Color.black);
+        jTextField0109.setEnabled(false);
+        jTextField0109.setHighlighter(null);
+
+        jTextField0108.setEditable(false);
+        jTextField0108.setDisabledTextColor(java.awt.Color.black);
+        jTextField0108.setEnabled(false);
+        jTextField0108.setHighlighter(null);
+
+        jTextField0107.setEditable(false);
+        jTextField0107.setDisabledTextColor(java.awt.Color.black);
+        jTextField0107.setEnabled(false);
+        jTextField0107.setHighlighter(null);
+
+        jTextField0106.setEditable(false);
+        jTextField0106.setDisabledTextColor(java.awt.Color.black);
+        jTextField0106.setEnabled(false);
+        jTextField0106.setHighlighter(null);
         jTextField0106.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0106ActionPerformed(evt);
             }
         });
 
+        jTextField0105.setEditable(false);
+        jTextField0105.setDisabledTextColor(java.awt.Color.black);
+        jTextField0105.setEnabled(false);
+        jTextField0105.setHighlighter(null);
+
+        jTextField0100.setEditable(false);
+        jTextField0100.setDisabledTextColor(java.awt.Color.black);
+        jTextField0100.setEnabled(false);
+        jTextField0100.setHighlighter(null);
         jTextField0100.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0100ActionPerformed(evt);
             }
         });
+
+        jTextField0110.setEditable(false);
+        jTextField0110.setDisabledTextColor(java.awt.Color.black);
+        jTextField0110.setEnabled(false);
+        jTextField0110.setHighlighter(null);
+
+        jTextField0112.setEditable(false);
+        jTextField0112.setDisabledTextColor(java.awt.Color.black);
+        jTextField0112.setEnabled(false);
+        jTextField0112.setHighlighter(null);
+
+        jTextField0111.setEditable(false);
+        jTextField0111.setDisabledTextColor(java.awt.Color.black);
+        jTextField0111.setEnabled(false);
+        jTextField0111.setHighlighter(null);
+
+        jTextField0114.setEditable(false);
+        jTextField0114.setDisabledTextColor(java.awt.Color.black);
+        jTextField0114.setEnabled(false);
+        jTextField0114.setHighlighter(null);
+
+        jTextField0113.setEditable(false);
+        jTextField0113.setDisabledTextColor(java.awt.Color.black);
+        jTextField0113.setEnabled(false);
+        jTextField0113.setHighlighter(null);
+
+        jTextField0115.setEditable(false);
+        jTextField0115.setDisabledTextColor(java.awt.Color.black);
+        jTextField0115.setEnabled(false);
+        jTextField0115.setHighlighter(null);
+
+        jTextField0116.setEditable(false);
+        jTextField0116.setDisabledTextColor(java.awt.Color.black);
+        jTextField0116.setEnabled(false);
+        jTextField0116.setHighlighter(null);
+
+        jTextField0117.setEditable(false);
+        jTextField0117.setDisabledTextColor(java.awt.Color.black);
+        jTextField0117.setEnabled(false);
+        jTextField0117.setHighlighter(null);
+
+        jTextField0118.setEditable(false);
+        jTextField0118.setDisabledTextColor(java.awt.Color.black);
+        jTextField0118.setEnabled(false);
+        jTextField0118.setHighlighter(null);
+
+        jTextField0119.setEditable(false);
+        jTextField0119.setDisabledTextColor(java.awt.Color.black);
+        jTextField0119.setEnabled(false);
+        jTextField0119.setHighlighter(null);
 
         newwordsearchbutton.setText("New Word Search");
         newwordsearchbutton.addActionListener(new java.awt.event.ActionListener() {
@@ -767,221 +964,1985 @@ public class Input extends javax.swing.JFrame {
             }
         });
 
+        jTextField0203.setEditable(false);
+        jTextField0203.setDisabledTextColor(java.awt.Color.black);
+        jTextField0203.setEnabled(false);
+        jTextField0203.setHighlighter(null);
+
+        jTextField0209.setEditable(false);
+        jTextField0209.setDisabledTextColor(java.awt.Color.black);
+        jTextField0209.setEnabled(false);
+        jTextField0209.setHighlighter(null);
+
+        jTextField0202.setEditable(false);
+        jTextField0202.setDisabledTextColor(java.awt.Color.black);
+        jTextField0202.setEnabled(false);
+        jTextField0202.setHighlighter(null);
+
+        jTextField0201.setEditable(false);
+        jTextField0201.setDisabledTextColor(java.awt.Color.black);
+        jTextField0201.setEnabled(false);
+        jTextField0201.setHighlighter(null);
+
+        jTextField0204.setEditable(false);
+        jTextField0204.setDisabledTextColor(java.awt.Color.black);
+        jTextField0204.setEnabled(false);
+        jTextField0204.setHighlighter(null);
+
+        jTextField0219.setEditable(false);
+        jTextField0219.setDisabledTextColor(java.awt.Color.black);
+        jTextField0219.setEnabled(false);
+        jTextField0219.setHighlighter(null);
+
+        jTextField0218.setEditable(false);
+        jTextField0218.setDisabledTextColor(java.awt.Color.black);
+        jTextField0218.setEnabled(false);
+        jTextField0218.setHighlighter(null);
+
+        jTextField0217.setEditable(false);
+        jTextField0217.setDisabledTextColor(java.awt.Color.black);
+        jTextField0217.setEnabled(false);
+        jTextField0217.setHighlighter(null);
+
+        jTextField0216.setEditable(false);
+        jTextField0216.setDisabledTextColor(java.awt.Color.black);
+        jTextField0216.setEnabled(false);
+        jTextField0216.setHighlighter(null);
+
+        jTextField0210.setEditable(false);
+        jTextField0210.setDisabledTextColor(java.awt.Color.black);
+        jTextField0210.setEnabled(false);
+        jTextField0210.setHighlighter(null);
+
+        jTextField0200.setEditable(false);
+        jTextField0200.setDisabledTextColor(java.awt.Color.black);
+        jTextField0200.setEnabled(false);
+        jTextField0200.setHighlighter(null);
         jTextField0200.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0200ActionPerformed(evt);
             }
         });
 
+        jTextField0207.setEditable(false);
+        jTextField0207.setDisabledTextColor(java.awt.Color.black);
+        jTextField0207.setEnabled(false);
+        jTextField0207.setHighlighter(null);
+
+        jTextField0208.setEditable(false);
+        jTextField0208.setDisabledTextColor(java.awt.Color.black);
+        jTextField0208.setEnabled(false);
+        jTextField0208.setHighlighter(null);
+
+        jTextField0205.setEditable(false);
+        jTextField0205.setDisabledTextColor(java.awt.Color.black);
+        jTextField0205.setEnabled(false);
+        jTextField0205.setHighlighter(null);
+
+        jTextField0206.setEditable(false);
+        jTextField0206.setDisabledTextColor(java.awt.Color.black);
+        jTextField0206.setEnabled(false);
+        jTextField0206.setHighlighter(null);
         jTextField0206.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0206ActionPerformed(evt);
             }
         });
 
+        jTextField0211.setEditable(false);
+        jTextField0211.setDisabledTextColor(java.awt.Color.black);
+        jTextField0211.setEnabled(false);
+        jTextField0211.setHighlighter(null);
+
+        jTextField0214.setEditable(false);
+        jTextField0214.setDisabledTextColor(java.awt.Color.black);
+        jTextField0214.setEnabled(false);
+        jTextField0214.setHighlighter(null);
+
+        jTextField0213.setEditable(false);
+        jTextField0213.setDisabledTextColor(java.awt.Color.black);
+        jTextField0213.setEnabled(false);
+        jTextField0213.setHighlighter(null);
+
+        jTextField0215.setEditable(false);
+        jTextField0215.setDisabledTextColor(java.awt.Color.black);
+        jTextField0215.setEnabled(false);
+        jTextField0215.setHighlighter(null);
+
+        jTextField0212.setEditable(false);
+        jTextField0212.setDisabledTextColor(java.awt.Color.black);
+        jTextField0212.setEnabled(false);
+        jTextField0212.setHighlighter(null);
+
+        jTextField0313.setEditable(false);
+        jTextField0313.setDisabledTextColor(java.awt.Color.black);
+        jTextField0313.setEnabled(false);
+        jTextField0313.setHighlighter(null);
+
+        jTextField0314.setEditable(false);
+        jTextField0314.setDisabledTextColor(java.awt.Color.black);
+        jTextField0314.setEnabled(false);
+        jTextField0314.setHighlighter(null);
+
+        jTextField0311.setEditable(false);
+        jTextField0311.setDisabledTextColor(java.awt.Color.black);
+        jTextField0311.setEnabled(false);
+        jTextField0311.setHighlighter(null);
+
+        jTextField0315.setEditable(false);
+        jTextField0315.setDisabledTextColor(java.awt.Color.black);
+        jTextField0315.setEnabled(false);
+        jTextField0315.setHighlighter(null);
+
+        jTextField0312.setEditable(false);
+        jTextField0312.setDisabledTextColor(java.awt.Color.black);
+        jTextField0312.setEnabled(false);
+        jTextField0312.setHighlighter(null);
+
+        jTextField0319.setEditable(false);
+        jTextField0319.setDisabledTextColor(java.awt.Color.black);
+        jTextField0319.setEnabled(false);
+        jTextField0319.setHighlighter(null);
+
+        jTextField0304.setEditable(false);
+        jTextField0304.setDisabledTextColor(java.awt.Color.black);
+        jTextField0304.setEnabled(false);
+        jTextField0304.setHighlighter(null);
+
+        jTextField0317.setEditable(false);
+        jTextField0317.setDisabledTextColor(java.awt.Color.black);
+        jTextField0317.setEnabled(false);
+        jTextField0317.setHighlighter(null);
+
+        jTextField0318.setEditable(false);
+        jTextField0318.setDisabledTextColor(java.awt.Color.black);
+        jTextField0318.setEnabled(false);
+        jTextField0318.setHighlighter(null);
+
+        jTextField0316.setEditable(false);
+        jTextField0316.setDisabledTextColor(java.awt.Color.black);
+        jTextField0316.setEnabled(false);
+        jTextField0316.setHighlighter(null);
+
+        jTextField0310.setEditable(false);
+        jTextField0310.setDisabledTextColor(java.awt.Color.black);
+        jTextField0310.setEnabled(false);
+        jTextField0310.setHighlighter(null);
+
+        jTextField0300.setEditable(false);
+        jTextField0300.setDisabledTextColor(java.awt.Color.black);
+        jTextField0300.setEnabled(false);
+        jTextField0300.setHighlighter(null);
         jTextField0300.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0300ActionPerformed(evt);
             }
         });
 
+        jTextField0307.setEditable(false);
+        jTextField0307.setDisabledTextColor(java.awt.Color.black);
+        jTextField0307.setEnabled(false);
+        jTextField0307.setHighlighter(null);
+
+        jTextField0308.setEditable(false);
+        jTextField0308.setDisabledTextColor(java.awt.Color.black);
+        jTextField0308.setEnabled(false);
+        jTextField0308.setHighlighter(null);
+
+        jTextField0305.setEditable(false);
+        jTextField0305.setDisabledTextColor(java.awt.Color.black);
+        jTextField0305.setEnabled(false);
+        jTextField0305.setHighlighter(null);
+
+        jTextField0306.setEditable(false);
+        jTextField0306.setDisabledTextColor(java.awt.Color.black);
+        jTextField0306.setEnabled(false);
+        jTextField0306.setHighlighter(null);
         jTextField0306.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0306ActionPerformed(evt);
             }
         });
 
+        jTextField0302.setEditable(false);
+        jTextField0302.setDisabledTextColor(java.awt.Color.black);
+        jTextField0302.setEnabled(false);
+        jTextField0302.setHighlighter(null);
+
+        jTextField0301.setEditable(false);
+        jTextField0301.setDisabledTextColor(java.awt.Color.black);
+        jTextField0301.setEnabled(false);
+        jTextField0301.setHighlighter(null);
+
+        jTextField0303.setEditable(false);
+        jTextField0303.setDisabledTextColor(java.awt.Color.black);
+        jTextField0303.setEnabled(false);
+        jTextField0303.setHighlighter(null);
+
+        jTextField0309.setEditable(false);
+        jTextField0309.setDisabledTextColor(java.awt.Color.black);
+        jTextField0309.setEnabled(false);
+        jTextField0309.setHighlighter(null);
+
+        jTextField0401.setEditable(false);
+        jTextField0401.setDisabledTextColor(java.awt.Color.black);
+        jTextField0401.setEnabled(false);
+        jTextField0401.setHighlighter(null);
+
+        jTextField0409.setEditable(false);
+        jTextField0409.setDisabledTextColor(java.awt.Color.black);
+        jTextField0409.setEnabled(false);
+        jTextField0409.setHighlighter(null);
+
+        jTextField0403.setEditable(false);
+        jTextField0403.setDisabledTextColor(java.awt.Color.black);
+        jTextField0403.setEnabled(false);
+        jTextField0403.setHighlighter(null);
+
+        jTextField0402.setEditable(false);
+        jTextField0402.setDisabledTextColor(java.awt.Color.black);
+        jTextField0402.setEnabled(false);
+        jTextField0402.setHighlighter(null);
+
+        jTextField0406.setEditable(false);
+        jTextField0406.setDisabledTextColor(java.awt.Color.black);
+        jTextField0406.setEnabled(false);
+        jTextField0406.setHighlighter(null);
         jTextField0406.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0406ActionPerformed(evt);
             }
         });
 
+        jTextField0405.setEditable(false);
+        jTextField0405.setDisabledTextColor(java.awt.Color.black);
+        jTextField0405.setEnabled(false);
+        jTextField0405.setHighlighter(null);
+
+        jTextField0408.setEditable(false);
+        jTextField0408.setDisabledTextColor(java.awt.Color.black);
+        jTextField0408.setEnabled(false);
+        jTextField0408.setHighlighter(null);
+
+        jTextField0407.setEditable(false);
+        jTextField0407.setDisabledTextColor(java.awt.Color.black);
+        jTextField0407.setEnabled(false);
+        jTextField0407.setHighlighter(null);
+
+        jTextField0400.setEditable(false);
+        jTextField0400.setDisabledTextColor(java.awt.Color.black);
+        jTextField0400.setEnabled(false);
+        jTextField0400.setHighlighter(null);
         jTextField0400.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0400ActionPerformed(evt);
             }
         });
 
+        jTextField0410.setEditable(false);
+        jTextField0410.setDisabledTextColor(java.awt.Color.black);
+        jTextField0410.setEnabled(false);
+        jTextField0410.setHighlighter(null);
+
+        jTextField0416.setEditable(false);
+        jTextField0416.setDisabledTextColor(java.awt.Color.black);
+        jTextField0416.setEnabled(false);
+        jTextField0416.setHighlighter(null);
+
+        jTextField0418.setEditable(false);
+        jTextField0418.setDisabledTextColor(java.awt.Color.black);
+        jTextField0418.setEnabled(false);
+        jTextField0418.setHighlighter(null);
+
+        jTextField0404.setEditable(false);
+        jTextField0404.setDisabledTextColor(java.awt.Color.black);
+        jTextField0404.setEnabled(false);
+        jTextField0404.setHighlighter(null);
+
+        jTextField0417.setEditable(false);
+        jTextField0417.setDisabledTextColor(java.awt.Color.black);
+        jTextField0417.setEnabled(false);
+        jTextField0417.setHighlighter(null);
+
+        jTextField0413.setEditable(false);
+        jTextField0413.setDisabledTextColor(java.awt.Color.black);
+        jTextField0413.setEnabled(false);
+        jTextField0413.setHighlighter(null);
+
+        jTextField0414.setEditable(false);
+        jTextField0414.setDisabledTextColor(java.awt.Color.black);
+        jTextField0414.setEnabled(false);
+        jTextField0414.setHighlighter(null);
+
+        jTextField0412.setEditable(false);
+        jTextField0412.setDisabledTextColor(java.awt.Color.black);
+        jTextField0412.setEnabled(false);
+        jTextField0412.setHighlighter(null);
+
+        jTextField0419.setEditable(false);
+        jTextField0419.setDisabledTextColor(java.awt.Color.black);
+        jTextField0419.setEnabled(false);
+        jTextField0419.setHighlighter(null);
+
+        jTextField0411.setEditable(false);
+        jTextField0411.setDisabledTextColor(java.awt.Color.black);
+        jTextField0411.setEnabled(false);
+        jTextField0411.setHighlighter(null);
+
+        jTextField0415.setEditable(false);
+        jTextField0415.setDisabledTextColor(java.awt.Color.black);
+        jTextField0415.setEnabled(false);
+        jTextField0415.setHighlighter(null);
+
+        jTextField0507.setEditable(false);
+        jTextField0507.setDisabledTextColor(java.awt.Color.black);
+        jTextField0507.setEnabled(false);
+        jTextField0507.setHighlighter(null);
+
+        jTextField0508.setEditable(false);
+        jTextField0508.setDisabledTextColor(java.awt.Color.black);
+        jTextField0508.setEnabled(false);
+        jTextField0508.setHighlighter(null);
+
+        jTextField0505.setEditable(false);
+        jTextField0505.setDisabledTextColor(java.awt.Color.black);
+        jTextField0505.setEnabled(false);
+        jTextField0505.setHighlighter(null);
+
+        jTextField0506.setEditable(false);
+        jTextField0506.setDisabledTextColor(java.awt.Color.black);
+        jTextField0506.setEnabled(false);
+        jTextField0506.setHighlighter(null);
         jTextField0506.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0506ActionPerformed(evt);
             }
         });
 
+        jTextField0502.setEditable(false);
+        jTextField0502.setDisabledTextColor(java.awt.Color.black);
+        jTextField0502.setEnabled(false);
+        jTextField0502.setHighlighter(null);
+
+        jTextField0503.setEditable(false);
+        jTextField0503.setDisabledTextColor(java.awt.Color.black);
+        jTextField0503.setEnabled(false);
+        jTextField0503.setHighlighter(null);
+
+        jTextField0509.setEditable(false);
+        jTextField0509.setDisabledTextColor(java.awt.Color.black);
+        jTextField0509.setEnabled(false);
+        jTextField0509.setHighlighter(null);
+
+        jTextField0501.setEditable(false);
+        jTextField0501.setDisabledTextColor(java.awt.Color.black);
+        jTextField0501.setEnabled(false);
+        jTextField0501.setHighlighter(null);
+
+        jTextField0513.setEditable(false);
+        jTextField0513.setDisabledTextColor(java.awt.Color.black);
+        jTextField0513.setEnabled(false);
+        jTextField0513.setHighlighter(null);
+
+        jTextField0514.setEditable(false);
+        jTextField0514.setDisabledTextColor(java.awt.Color.black);
+        jTextField0514.setEnabled(false);
+        jTextField0514.setHighlighter(null);
+
+        jTextField0504.setEditable(false);
+        jTextField0504.setDisabledTextColor(java.awt.Color.black);
+        jTextField0504.setEnabled(false);
+        jTextField0504.setHighlighter(null);
+
+        jTextField0517.setEditable(false);
+        jTextField0517.setDisabledTextColor(java.awt.Color.black);
+        jTextField0517.setEnabled(false);
+        jTextField0517.setHighlighter(null);
+
+        jTextField0516.setEditable(false);
+        jTextField0516.setDisabledTextColor(java.awt.Color.black);
+        jTextField0516.setEnabled(false);
+        jTextField0516.setHighlighter(null);
+
+        jTextField0518.setEditable(false);
+        jTextField0518.setDisabledTextColor(java.awt.Color.black);
+        jTextField0518.setEnabled(false);
+        jTextField0518.setHighlighter(null);
+
+        jTextField0500.setEditable(false);
+        jTextField0500.setDisabledTextColor(java.awt.Color.black);
+        jTextField0500.setEnabled(false);
+        jTextField0500.setHighlighter(null);
         jTextField0500.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0500ActionPerformed(evt);
             }
         });
 
+        jTextField0510.setEditable(false);
+        jTextField0510.setDisabledTextColor(java.awt.Color.black);
+        jTextField0510.setEnabled(false);
+        jTextField0510.setHighlighter(null);
+
+        jTextField0512.setEditable(false);
+        jTextField0512.setDisabledTextColor(java.awt.Color.black);
+        jTextField0512.setEnabled(false);
+        jTextField0512.setHighlighter(null);
+
+        jTextField0519.setEditable(false);
+        jTextField0519.setDisabledTextColor(java.awt.Color.black);
+        jTextField0519.setEnabled(false);
+        jTextField0519.setHighlighter(null);
+
+        jTextField0515.setEditable(false);
+        jTextField0515.setDisabledTextColor(java.awt.Color.black);
+        jTextField0515.setEnabled(false);
+        jTextField0515.setHighlighter(null);
+
+        jTextField0511.setEditable(false);
+        jTextField0511.setDisabledTextColor(java.awt.Color.black);
+        jTextField0511.setEnabled(false);
+        jTextField0511.setHighlighter(null);
+
+        jTextField0606.setEditable(false);
+        jTextField0606.setDisabledTextColor(java.awt.Color.black);
+        jTextField0606.setEnabled(false);
+        jTextField0606.setHighlighter(null);
         jTextField0606.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0606ActionPerformed(evt);
             }
         });
 
+        jTextField0602.setEditable(false);
+        jTextField0602.setDisabledTextColor(java.awt.Color.black);
+        jTextField0602.setEnabled(false);
+        jTextField0602.setHighlighter(null);
+
+        jTextField0603.setEditable(false);
+        jTextField0603.setDisabledTextColor(java.awt.Color.black);
+        jTextField0603.setEnabled(false);
+        jTextField0603.setHighlighter(null);
+
+        jTextField0609.setEditable(false);
+        jTextField0609.setDisabledTextColor(java.awt.Color.black);
+        jTextField0609.setEnabled(false);
+        jTextField0609.setHighlighter(null);
+
+        jTextField0607.setEditable(false);
+        jTextField0607.setDisabledTextColor(java.awt.Color.black);
+        jTextField0607.setEnabled(false);
+        jTextField0607.setHighlighter(null);
+
+        jTextField0608.setEditable(false);
+        jTextField0608.setDisabledTextColor(java.awt.Color.black);
+        jTextField0608.setEnabled(false);
+        jTextField0608.setHighlighter(null);
+
+        jTextField0605.setEditable(false);
+        jTextField0605.setDisabledTextColor(java.awt.Color.black);
+        jTextField0605.setEnabled(false);
+        jTextField0605.setHighlighter(null);
+
+        jTextField0601.setEditable(false);
+        jTextField0601.setDisabledTextColor(java.awt.Color.black);
+        jTextField0601.setEnabled(false);
+        jTextField0601.setHighlighter(null);
+
+        jTextField0616.setEditable(false);
+        jTextField0616.setDisabledTextColor(java.awt.Color.black);
+        jTextField0616.setEnabled(false);
+        jTextField0616.setHighlighter(null);
+
+        jTextField0618.setEditable(false);
+        jTextField0618.setDisabledTextColor(java.awt.Color.black);
+        jTextField0618.setEnabled(false);
+        jTextField0618.setHighlighter(null);
+
+        jTextField0604.setEditable(false);
+        jTextField0604.setDisabledTextColor(java.awt.Color.black);
+        jTextField0604.setEnabled(false);
+        jTextField0604.setHighlighter(null);
+
+        jTextField0617.setEditable(false);
+        jTextField0617.setDisabledTextColor(java.awt.Color.black);
+        jTextField0617.setEnabled(false);
+        jTextField0617.setHighlighter(null);
+
+        jTextField0612.setEditable(false);
+        jTextField0612.setDisabledTextColor(java.awt.Color.black);
+        jTextField0612.setEnabled(false);
+        jTextField0612.setHighlighter(null);
+
+        jTextField0619.setEditable(false);
+        jTextField0619.setDisabledTextColor(java.awt.Color.black);
+        jTextField0619.setEnabled(false);
+        jTextField0619.setHighlighter(null);
+
+        jTextField0600.setEditable(false);
+        jTextField0600.setDisabledTextColor(java.awt.Color.black);
+        jTextField0600.setEnabled(false);
+        jTextField0600.setHighlighter(null);
         jTextField0600.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0600ActionPerformed(evt);
             }
         });
 
+        jTextField0610.setEditable(false);
+        jTextField0610.setDisabledTextColor(java.awt.Color.black);
+        jTextField0610.setEnabled(false);
+        jTextField0610.setHighlighter(null);
+
+        jTextField0614.setEditable(false);
+        jTextField0614.setDisabledTextColor(java.awt.Color.black);
+        jTextField0614.setEnabled(false);
+        jTextField0614.setHighlighter(null);
+
+        jTextField0613.setEditable(false);
+        jTextField0613.setDisabledTextColor(java.awt.Color.black);
+        jTextField0613.setEnabled(false);
+        jTextField0613.setHighlighter(null);
+
+        jTextField0615.setEditable(false);
+        jTextField0615.setDisabledTextColor(java.awt.Color.black);
+        jTextField0615.setEnabled(false);
+        jTextField0615.setHighlighter(null);
+
+        jTextField0611.setEditable(false);
+        jTextField0611.setDisabledTextColor(java.awt.Color.black);
+        jTextField0611.setEnabled(false);
+        jTextField0611.setHighlighter(null);
+
+        jTextField0713.setEditable(false);
+        jTextField0713.setDisabledTextColor(java.awt.Color.black);
+        jTextField0713.setEnabled(false);
+        jTextField0713.setHighlighter(null);
+
+        jTextField0714.setEditable(false);
+        jTextField0714.setDisabledTextColor(java.awt.Color.black);
+        jTextField0714.setEnabled(false);
+        jTextField0714.setHighlighter(null);
+
+        jTextField0710.setEditable(false);
+        jTextField0710.setDisabledTextColor(java.awt.Color.black);
+        jTextField0710.setEnabled(false);
+        jTextField0710.setHighlighter(null);
+
+        jTextField0700.setEditable(false);
+        jTextField0700.setDisabledTextColor(java.awt.Color.black);
+        jTextField0700.setEnabled(false);
+        jTextField0700.setHighlighter(null);
         jTextField0700.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0700ActionPerformed(evt);
             }
         });
 
+        jTextField0719.setEditable(false);
+        jTextField0719.setDisabledTextColor(java.awt.Color.black);
+        jTextField0719.setEnabled(false);
+        jTextField0719.setHighlighter(null);
+
+        jTextField0712.setEditable(false);
+        jTextField0712.setDisabledTextColor(java.awt.Color.black);
+        jTextField0712.setEnabled(false);
+        jTextField0712.setHighlighter(null);
+
+        jTextField0704.setEditable(false);
+        jTextField0704.setDisabledTextColor(java.awt.Color.black);
+        jTextField0704.setEnabled(false);
+        jTextField0704.setHighlighter(null);
+
+        jTextField0717.setEditable(false);
+        jTextField0717.setDisabledTextColor(java.awt.Color.black);
+        jTextField0717.setEnabled(false);
+        jTextField0717.setHighlighter(null);
+
+        jTextField0716.setEditable(false);
+        jTextField0716.setDisabledTextColor(java.awt.Color.black);
+        jTextField0716.setEnabled(false);
+        jTextField0716.setHighlighter(null);
+
+        jTextField0718.setEditable(false);
+        jTextField0718.setDisabledTextColor(java.awt.Color.black);
+        jTextField0718.setEnabled(false);
+        jTextField0718.setHighlighter(null);
+
+        jTextField0711.setEditable(false);
+        jTextField0711.setDisabledTextColor(java.awt.Color.black);
+        jTextField0711.setEnabled(false);
+        jTextField0711.setHighlighter(null);
+
+        jTextField0715.setEditable(false);
+        jTextField0715.setDisabledTextColor(java.awt.Color.black);
+        jTextField0715.setEnabled(false);
+        jTextField0715.setHighlighter(null);
+
+        jTextField0702.setEditable(false);
+        jTextField0702.setDisabledTextColor(java.awt.Color.black);
+        jTextField0702.setEnabled(false);
+        jTextField0702.setHighlighter(null);
+
+        jTextField0703.setEditable(false);
+        jTextField0703.setDisabledTextColor(java.awt.Color.black);
+        jTextField0703.setEnabled(false);
+        jTextField0703.setHighlighter(null);
+
+        jTextField0709.setEditable(false);
+        jTextField0709.setDisabledTextColor(java.awt.Color.black);
+        jTextField0709.setEnabled(false);
+        jTextField0709.setHighlighter(null);
+
+        jTextField0707.setEditable(false);
+        jTextField0707.setDisabledTextColor(java.awt.Color.black);
+        jTextField0707.setEnabled(false);
+        jTextField0707.setHighlighter(null);
+
+        jTextField0708.setEditable(false);
+        jTextField0708.setDisabledTextColor(java.awt.Color.black);
+        jTextField0708.setEnabled(false);
+        jTextField0708.setHighlighter(null);
+
+        jTextField0705.setEditable(false);
+        jTextField0705.setDisabledTextColor(java.awt.Color.black);
+        jTextField0705.setEnabled(false);
+        jTextField0705.setHighlighter(null);
+
+        jTextField0701.setEditable(false);
+        jTextField0701.setDisabledTextColor(java.awt.Color.black);
+        jTextField0701.setEnabled(false);
+        jTextField0701.setHighlighter(null);
+
+        jTextField0706.setEditable(false);
+        jTextField0706.setDisabledTextColor(java.awt.Color.black);
+        jTextField0706.setEnabled(false);
+        jTextField0706.setHighlighter(null);
         jTextField0706.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0706ActionPerformed(evt);
             }
         });
 
+        jTextField0817.setEditable(false);
+        jTextField0817.setDisabledTextColor(java.awt.Color.black);
+        jTextField0817.setEnabled(false);
+        jTextField0817.setHighlighter(null);
+
+        jTextField0819.setEditable(false);
+        jTextField0819.setDisabledTextColor(java.awt.Color.black);
+        jTextField0819.setEnabled(false);
+        jTextField0819.setHighlighter(null);
+
+        jTextField0800.setEditable(false);
+        jTextField0800.setDisabledTextColor(java.awt.Color.black);
+        jTextField0800.setEnabled(false);
+        jTextField0800.setHighlighter(null);
         jTextField0800.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0800ActionPerformed(evt);
             }
         });
 
+        jTextField0804.setEditable(false);
+        jTextField0804.setDisabledTextColor(java.awt.Color.black);
+        jTextField0804.setEnabled(false);
+        jTextField0804.setHighlighter(null);
+
+        jTextField0812.setEditable(false);
+        jTextField0812.setDisabledTextColor(java.awt.Color.black);
+        jTextField0812.setEnabled(false);
+        jTextField0812.setHighlighter(null);
+
+        jTextField0813.setEditable(false);
+        jTextField0813.setDisabledTextColor(java.awt.Color.black);
+        jTextField0813.setEnabled(false);
+        jTextField0813.setHighlighter(null);
+
+        jTextField0814.setEditable(false);
+        jTextField0814.setDisabledTextColor(java.awt.Color.black);
+        jTextField0814.setEnabled(false);
+        jTextField0814.setHighlighter(null);
+
+        jTextField0810.setEditable(false);
+        jTextField0810.setDisabledTextColor(java.awt.Color.black);
+        jTextField0810.setEnabled(false);
+        jTextField0810.setHighlighter(null);
+
+        jTextField0805.setEditable(false);
+        jTextField0805.setDisabledTextColor(java.awt.Color.black);
+        jTextField0805.setEnabled(false);
+        jTextField0805.setHighlighter(null);
+
+        jTextField0808.setEditable(false);
+        jTextField0808.setDisabledTextColor(java.awt.Color.black);
+        jTextField0808.setEnabled(false);
+        jTextField0808.setHighlighter(null);
+
+        jTextField0807.setEditable(false);
+        jTextField0807.setDisabledTextColor(java.awt.Color.black);
+        jTextField0807.setEnabled(false);
+        jTextField0807.setHighlighter(null);
+
+        jTextField0809.setEditable(false);
+        jTextField0809.setDisabledTextColor(java.awt.Color.black);
+        jTextField0809.setEnabled(false);
+        jTextField0809.setHighlighter(null);
+
+        jTextField0816.setEditable(false);
+        jTextField0816.setDisabledTextColor(java.awt.Color.black);
+        jTextField0816.setEnabled(false);
+        jTextField0816.setHighlighter(null);
+
+        jTextField0818.setEditable(false);
+        jTextField0818.setDisabledTextColor(java.awt.Color.black);
+        jTextField0818.setEnabled(false);
+        jTextField0818.setHighlighter(null);
+
+        jTextField0802.setEditable(false);
+        jTextField0802.setDisabledTextColor(java.awt.Color.black);
+        jTextField0802.setEnabled(false);
+        jTextField0802.setHighlighter(null);
+
+        jTextField0803.setEditable(false);
+        jTextField0803.setDisabledTextColor(java.awt.Color.black);
+        jTextField0803.setEnabled(false);
+        jTextField0803.setHighlighter(null);
+
+        jTextField0811.setEditable(false);
+        jTextField0811.setDisabledTextColor(java.awt.Color.black);
+        jTextField0811.setEnabled(false);
+        jTextField0811.setHighlighter(null);
+
+        jTextField0815.setEditable(false);
+        jTextField0815.setDisabledTextColor(java.awt.Color.black);
+        jTextField0815.setEnabled(false);
+        jTextField0815.setHighlighter(null);
+
+        jTextField0801.setEditable(false);
+        jTextField0801.setDisabledTextColor(java.awt.Color.black);
+        jTextField0801.setEnabled(false);
+        jTextField0801.setHighlighter(null);
+
+        jTextField0806.setEditable(false);
+        jTextField0806.setDisabledTextColor(java.awt.Color.black);
+        jTextField0806.setEnabled(false);
+        jTextField0806.setHighlighter(null);
         jTextField0806.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0806ActionPerformed(evt);
             }
         });
 
+        jTextField0901.setEditable(false);
+        jTextField0901.setDisabledTextColor(java.awt.Color.black);
+        jTextField0901.setEnabled(false);
+        jTextField0901.setHighlighter(null);
+
+        jTextField0906.setEditable(false);
+        jTextField0906.setDisabledTextColor(java.awt.Color.black);
+        jTextField0906.setEnabled(false);
+        jTextField0906.setHighlighter(null);
         jTextField0906.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0906ActionPerformed(evt);
             }
         });
 
+        jTextField0914.setEditable(false);
+        jTextField0914.setDisabledTextColor(java.awt.Color.black);
+        jTextField0914.setEnabled(false);
+        jTextField0914.setHighlighter(null);
+
+        jTextField0913.setEditable(false);
+        jTextField0913.setDisabledTextColor(java.awt.Color.black);
+        jTextField0913.setEnabled(false);
+        jTextField0913.setHighlighter(null);
+
+        jTextField0910.setEditable(false);
+        jTextField0910.setDisabledTextColor(java.awt.Color.black);
+        jTextField0910.setEnabled(false);
+        jTextField0910.setHighlighter(null);
+
+        jTextField0917.setEditable(false);
+        jTextField0917.setDisabledTextColor(java.awt.Color.black);
+        jTextField0917.setEnabled(false);
+        jTextField0917.setHighlighter(null);
+
+        jTextField0919.setEditable(false);
+        jTextField0919.setDisabledTextColor(java.awt.Color.black);
+        jTextField0919.setEnabled(false);
+        jTextField0919.setHighlighter(null);
+
+        jTextField0900.setEditable(false);
+        jTextField0900.setDisabledTextColor(java.awt.Color.black);
+        jTextField0900.setEnabled(false);
+        jTextField0900.setHighlighter(null);
         jTextField0900.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField0900ActionPerformed(evt);
             }
         });
 
+        jTextField0904.setEditable(false);
+        jTextField0904.setDisabledTextColor(java.awt.Color.black);
+        jTextField0904.setEnabled(false);
+        jTextField0904.setHighlighter(null);
+
+        jTextField0912.setEditable(false);
+        jTextField0912.setDisabledTextColor(java.awt.Color.black);
+        jTextField0912.setEnabled(false);
+        jTextField0912.setHighlighter(null);
+
+        jTextField0918.setEditable(false);
+        jTextField0918.setDisabledTextColor(java.awt.Color.black);
+        jTextField0918.setEnabled(false);
+        jTextField0918.setHighlighter(null);
+
+        jTextField0916.setEditable(false);
+        jTextField0916.setDisabledTextColor(java.awt.Color.black);
+        jTextField0916.setEnabled(false);
+        jTextField0916.setHighlighter(null);
+
+        jTextField0903.setEditable(false);
+        jTextField0903.setDisabledTextColor(java.awt.Color.black);
+        jTextField0903.setEnabled(false);
+        jTextField0903.setHighlighter(null);
+
+        jTextField0902.setEditable(false);
+        jTextField0902.setDisabledTextColor(java.awt.Color.black);
+        jTextField0902.setEnabled(false);
+        jTextField0902.setHighlighter(null);
+
+        jTextField0908.setEditable(false);
+        jTextField0908.setDisabledTextColor(java.awt.Color.black);
+        jTextField0908.setEnabled(false);
+        jTextField0908.setHighlighter(null);
+
+        jTextField0905.setEditable(false);
+        jTextField0905.setDisabledTextColor(java.awt.Color.black);
+        jTextField0905.setEnabled(false);
+        jTextField0905.setHighlighter(null);
+
+        jTextField0909.setEditable(false);
+        jTextField0909.setDisabledTextColor(java.awt.Color.black);
+        jTextField0909.setEnabled(false);
+        jTextField0909.setHighlighter(null);
+
+        jTextField0907.setEditable(false);
+        jTextField0907.setDisabledTextColor(java.awt.Color.black);
+        jTextField0907.setEnabled(false);
+        jTextField0907.setHighlighter(null);
+
+        jTextField0911.setEditable(false);
+        jTextField0911.setDisabledTextColor(java.awt.Color.black);
+        jTextField0911.setEnabled(false);
+        jTextField0911.setHighlighter(null);
+
+        jTextField0915.setEditable(false);
+        jTextField0915.setDisabledTextColor(java.awt.Color.black);
+        jTextField0915.setEnabled(false);
+        jTextField0915.setHighlighter(null);
+
+        jTextField1001.setEditable(false);
+        jTextField1001.setDisabledTextColor(java.awt.Color.black);
+        jTextField1001.setEnabled(false);
+        jTextField1001.setHighlighter(null);
+
+        jTextField1006.setEditable(false);
+        jTextField1006.setDisabledTextColor(java.awt.Color.black);
+        jTextField1006.setEnabled(false);
+        jTextField1006.setHighlighter(null);
         jTextField1006.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1006ActionPerformed(evt);
             }
         });
 
+        jTextField1014.setEditable(false);
+        jTextField1014.setDisabledTextColor(java.awt.Color.black);
+        jTextField1014.setEnabled(false);
+        jTextField1014.setHighlighter(null);
+
+        jTextField1013.setEditable(false);
+        jTextField1013.setDisabledTextColor(java.awt.Color.black);
+        jTextField1013.setEnabled(false);
+        jTextField1013.setHighlighter(null);
+
+        jTextField1010.setEditable(false);
+        jTextField1010.setDisabledTextColor(java.awt.Color.black);
+        jTextField1010.setEnabled(false);
+        jTextField1010.setHighlighter(null);
+
+        jTextField1017.setEditable(false);
+        jTextField1017.setDisabledTextColor(java.awt.Color.black);
+        jTextField1017.setEnabled(false);
+        jTextField1017.setHighlighter(null);
+
+        jTextField1019.setEditable(false);
+        jTextField1019.setDisabledTextColor(java.awt.Color.black);
+        jTextField1019.setEnabled(false);
+        jTextField1019.setHighlighter(null);
+
+        jTextField1000.setEditable(false);
+        jTextField1000.setDisabledTextColor(java.awt.Color.black);
+        jTextField1000.setEnabled(false);
+        jTextField1000.setHighlighter(null);
         jTextField1000.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1000ActionPerformed(evt);
             }
         });
 
+        jTextField1012.setEditable(false);
+        jTextField1012.setDisabledTextColor(java.awt.Color.black);
+        jTextField1012.setEnabled(false);
+        jTextField1012.setHighlighter(null);
+
+        jTextField1018.setEditable(false);
+        jTextField1018.setDisabledTextColor(java.awt.Color.black);
+        jTextField1018.setEnabled(false);
+        jTextField1018.setHighlighter(null);
+
+        jTextField1004.setEditable(false);
+        jTextField1004.setDisabledTextColor(java.awt.Color.black);
+        jTextField1004.setEnabled(false);
+        jTextField1004.setHighlighter(null);
+
+        jTextField1002.setEditable(false);
+        jTextField1002.setDisabledTextColor(java.awt.Color.black);
+        jTextField1002.setEnabled(false);
+        jTextField1002.setHighlighter(null);
+
+        jTextField1008.setEditable(false);
+        jTextField1008.setDisabledTextColor(java.awt.Color.black);
+        jTextField1008.setEnabled(false);
+        jTextField1008.setHighlighter(null);
+
+        jTextField1016.setEditable(false);
+        jTextField1016.setDisabledTextColor(java.awt.Color.black);
+        jTextField1016.setEnabled(false);
+        jTextField1016.setHighlighter(null);
+
+        jTextField1003.setEditable(false);
+        jTextField1003.setDisabledTextColor(java.awt.Color.black);
+        jTextField1003.setEnabled(false);
+        jTextField1003.setHighlighter(null);
+
+        jTextField1007.setEditable(false);
+        jTextField1007.setDisabledTextColor(java.awt.Color.black);
+        jTextField1007.setEnabled(false);
+        jTextField1007.setHighlighter(null);
+
+        jTextField1005.setEditable(false);
+        jTextField1005.setDisabledTextColor(java.awt.Color.black);
+        jTextField1005.setEnabled(false);
+        jTextField1005.setHighlighter(null);
+
+        jTextField1009.setEditable(false);
+        jTextField1009.setDisabledTextColor(java.awt.Color.black);
+        jTextField1009.setEnabled(false);
+        jTextField1009.setHighlighter(null);
+
+        jTextField1011.setEditable(false);
+        jTextField1011.setDisabledTextColor(java.awt.Color.black);
+        jTextField1011.setEnabled(false);
+        jTextField1011.setHighlighter(null);
+
+        jTextField1015.setEditable(false);
+        jTextField1015.setDisabledTextColor(java.awt.Color.black);
+        jTextField1015.setEnabled(false);
+        jTextField1015.setHighlighter(null);
+
+        jTextField1116.setEditable(false);
+        jTextField1116.setDisabledTextColor(java.awt.Color.black);
+        jTextField1116.setEnabled(false);
+        jTextField1116.setHighlighter(null);
+
+        jTextField1113.setEditable(false);
+        jTextField1113.setDisabledTextColor(java.awt.Color.black);
+        jTextField1113.setEnabled(false);
+        jTextField1113.setHighlighter(null);
+
+        jTextField1101.setEditable(false);
+        jTextField1101.setDisabledTextColor(java.awt.Color.black);
+        jTextField1101.setEnabled(false);
+        jTextField1101.setHighlighter(null);
+
+        jTextField1119.setEditable(false);
+        jTextField1119.setDisabledTextColor(java.awt.Color.black);
+        jTextField1119.setEnabled(false);
+        jTextField1119.setHighlighter(null);
+
+        jTextField1103.setEditable(false);
+        jTextField1103.setDisabledTextColor(java.awt.Color.black);
+        jTextField1103.setEnabled(false);
+        jTextField1103.setHighlighter(null);
+
+        jTextField1104.setEditable(false);
+        jTextField1104.setDisabledTextColor(java.awt.Color.black);
+        jTextField1104.setEnabled(false);
+        jTextField1104.setHighlighter(null);
+
+        jTextField1106.setEditable(false);
+        jTextField1106.setDisabledTextColor(java.awt.Color.black);
+        jTextField1106.setEnabled(false);
+        jTextField1106.setHighlighter(null);
         jTextField1106.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1106ActionPerformed(evt);
             }
         });
 
+        jTextField1109.setEditable(false);
+        jTextField1109.setDisabledTextColor(java.awt.Color.black);
+        jTextField1109.setEnabled(false);
+        jTextField1109.setHighlighter(null);
+
+        jTextField1108.setEditable(false);
+        jTextField1108.setDisabledTextColor(java.awt.Color.black);
+        jTextField1108.setEnabled(false);
+        jTextField1108.setHighlighter(null);
+
+        jTextField1115.setEditable(false);
+        jTextField1115.setDisabledTextColor(java.awt.Color.black);
+        jTextField1115.setEnabled(false);
+        jTextField1115.setHighlighter(null);
+
+        jTextField1112.setEditable(false);
+        jTextField1112.setDisabledTextColor(java.awt.Color.black);
+        jTextField1112.setEnabled(false);
+        jTextField1112.setHighlighter(null);
+
+        jTextField1110.setEditable(false);
+        jTextField1110.setDisabledTextColor(java.awt.Color.black);
+        jTextField1110.setEnabled(false);
+        jTextField1110.setHighlighter(null);
+
+        jTextField1100.setEditable(false);
+        jTextField1100.setDisabledTextColor(java.awt.Color.black);
+        jTextField1100.setEnabled(false);
+        jTextField1100.setHighlighter(null);
         jTextField1100.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1100ActionPerformed(evt);
             }
         });
 
+        jTextField1111.setEditable(false);
+        jTextField1111.setDisabledTextColor(java.awt.Color.black);
+        jTextField1111.setEnabled(false);
+        jTextField1111.setHighlighter(null);
+
+        jTextField1118.setEditable(false);
+        jTextField1118.setDisabledTextColor(java.awt.Color.black);
+        jTextField1118.setEnabled(false);
+        jTextField1118.setHighlighter(null);
+
+        jTextField1114.setEditable(false);
+        jTextField1114.setDisabledTextColor(java.awt.Color.black);
+        jTextField1114.setEnabled(false);
+        jTextField1114.setHighlighter(null);
+
+        jTextField1107.setEditable(false);
+        jTextField1107.setDisabledTextColor(java.awt.Color.black);
+        jTextField1107.setEnabled(false);
+        jTextField1107.setHighlighter(null);
+
+        jTextField1102.setEditable(false);
+        jTextField1102.setDisabledTextColor(java.awt.Color.black);
+        jTextField1102.setEnabled(false);
+        jTextField1102.setHighlighter(null);
+
+        jTextField1117.setEditable(false);
+        jTextField1117.setDisabledTextColor(java.awt.Color.black);
+        jTextField1117.setEnabled(false);
+        jTextField1117.setHighlighter(null);
+
+        jTextField1105.setEditable(false);
+        jTextField1105.setDisabledTextColor(java.awt.Color.black);
+        jTextField1105.setEnabled(false);
+        jTextField1105.setHighlighter(null);
+
+        jTextField1201.setEditable(false);
+        jTextField1201.setDisabledTextColor(java.awt.Color.black);
+        jTextField1201.setEnabled(false);
+        jTextField1201.setHighlighter(null);
+
+        jTextField1212.setEditable(false);
+        jTextField1212.setDisabledTextColor(java.awt.Color.black);
+        jTextField1212.setEnabled(false);
+        jTextField1212.setHighlighter(null);
+
+        jTextField1217.setEditable(false);
+        jTextField1217.setDisabledTextColor(java.awt.Color.black);
+        jTextField1217.setEnabled(false);
+        jTextField1217.setHighlighter(null);
+
+        jTextField1218.setEditable(false);
+        jTextField1218.setDisabledTextColor(java.awt.Color.black);
+        jTextField1218.setEnabled(false);
+        jTextField1218.setHighlighter(null);
+
+        jTextField1216.setEditable(false);
+        jTextField1216.setDisabledTextColor(java.awt.Color.black);
+        jTextField1216.setEnabled(false);
+        jTextField1216.setHighlighter(null);
+
+        jTextField1200.setEditable(false);
+        jTextField1200.setDisabledTextColor(java.awt.Color.black);
+        jTextField1200.setEnabled(false);
+        jTextField1200.setHighlighter(null);
         jTextField1200.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1200ActionPerformed(evt);
             }
         });
 
+        jTextField1211.setEditable(false);
+        jTextField1211.setDisabledTextColor(java.awt.Color.black);
+        jTextField1211.setEnabled(false);
+        jTextField1211.setHighlighter(null);
+
+        jTextField1213.setEditable(false);
+        jTextField1213.setDisabledTextColor(java.awt.Color.black);
+        jTextField1213.setEnabled(false);
+        jTextField1213.setHighlighter(null);
+
+        jTextField1206.setEditable(false);
+        jTextField1206.setDisabledTextColor(java.awt.Color.black);
+        jTextField1206.setEnabled(false);
+        jTextField1206.setHighlighter(null);
         jTextField1206.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1206ActionPerformed(evt);
             }
         });
 
+        jTextField1215.setEditable(false);
+        jTextField1215.setDisabledTextColor(java.awt.Color.black);
+        jTextField1215.setEnabled(false);
+        jTextField1215.setHighlighter(null);
+
+        jTextField1208.setEditable(false);
+        jTextField1208.setDisabledTextColor(java.awt.Color.black);
+        jTextField1208.setEnabled(false);
+        jTextField1208.setHighlighter(null);
+
+        jTextField1202.setEditable(false);
+        jTextField1202.setDisabledTextColor(java.awt.Color.black);
+        jTextField1202.setEnabled(false);
+        jTextField1202.setHighlighter(null);
+
+        jTextField1214.setEditable(false);
+        jTextField1214.setDisabledTextColor(java.awt.Color.black);
+        jTextField1214.setEnabled(false);
+        jTextField1214.setHighlighter(null);
+
+        jTextField1210.setEditable(false);
+        jTextField1210.setDisabledTextColor(java.awt.Color.black);
+        jTextField1210.setEnabled(false);
+        jTextField1210.setHighlighter(null);
+
+        jTextField1205.setEditable(false);
+        jTextField1205.setDisabledTextColor(java.awt.Color.black);
+        jTextField1205.setEnabled(false);
+        jTextField1205.setHighlighter(null);
+
+        jTextField1203.setEditable(false);
+        jTextField1203.setDisabledTextColor(java.awt.Color.black);
+        jTextField1203.setEnabled(false);
+        jTextField1203.setHighlighter(null);
+
+        jTextField1204.setEditable(false);
+        jTextField1204.setDisabledTextColor(java.awt.Color.black);
+        jTextField1204.setEnabled(false);
+        jTextField1204.setHighlighter(null);
+
+        jTextField1219.setEditable(false);
+        jTextField1219.setDisabledTextColor(java.awt.Color.black);
+        jTextField1219.setEnabled(false);
+        jTextField1219.setHighlighter(null);
+
+        jTextField1209.setEditable(false);
+        jTextField1209.setDisabledTextColor(java.awt.Color.black);
+        jTextField1209.setEnabled(false);
+        jTextField1209.setHighlighter(null);
+
+        jTextField1207.setEditable(false);
+        jTextField1207.setDisabledTextColor(java.awt.Color.black);
+        jTextField1207.setEnabled(false);
+        jTextField1207.setHighlighter(null);
+
+        jTextField1314.setEditable(false);
+        jTextField1314.setDisabledTextColor(java.awt.Color.black);
+        jTextField1314.setEnabled(false);
+        jTextField1314.setHighlighter(null);
+
+        jTextField1304.setEditable(false);
+        jTextField1304.setDisabledTextColor(java.awt.Color.black);
+        jTextField1304.setEnabled(false);
+        jTextField1304.setHighlighter(null);
+
+        jTextField1300.setEditable(false);
+        jTextField1300.setDisabledTextColor(java.awt.Color.black);
+        jTextField1300.setEnabled(false);
+        jTextField1300.setHighlighter(null);
         jTextField1300.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1300ActionPerformed(evt);
             }
         });
 
+        jTextField1316.setEditable(false);
+        jTextField1316.setDisabledTextColor(java.awt.Color.black);
+        jTextField1316.setEnabled(false);
+        jTextField1316.setHighlighter(null);
+
+        jTextField1309.setEditable(false);
+        jTextField1309.setDisabledTextColor(java.awt.Color.black);
+        jTextField1309.setEnabled(false);
+        jTextField1309.setHighlighter(null);
+
+        jTextField1318.setEditable(false);
+        jTextField1318.setDisabledTextColor(java.awt.Color.black);
+        jTextField1318.setEnabled(false);
+        jTextField1318.setHighlighter(null);
+
+        jTextField1301.setEditable(false);
+        jTextField1301.setDisabledTextColor(java.awt.Color.black);
+        jTextField1301.setEnabled(false);
+        jTextField1301.setHighlighter(null);
+
+        jTextField1312.setEditable(false);
+        jTextField1312.setDisabledTextColor(java.awt.Color.black);
+        jTextField1312.setEnabled(false);
+        jTextField1312.setHighlighter(null);
+
+        jTextField1319.setEditable(false);
+        jTextField1319.setDisabledTextColor(java.awt.Color.black);
+        jTextField1319.setEnabled(false);
+        jTextField1319.setHighlighter(null);
+
+        jTextField1306.setEditable(false);
+        jTextField1306.setDisabledTextColor(java.awt.Color.black);
+        jTextField1306.setEnabled(false);
+        jTextField1306.setHighlighter(null);
         jTextField1306.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1306ActionPerformed(evt);
             }
         });
 
+        jTextField1310.setEditable(false);
+        jTextField1310.setDisabledTextColor(java.awt.Color.black);
+        jTextField1310.setEnabled(false);
+        jTextField1310.setHighlighter(null);
+
+        jTextField1303.setEditable(false);
+        jTextField1303.setDisabledTextColor(java.awt.Color.black);
+        jTextField1303.setEnabled(false);
+        jTextField1303.setHighlighter(null);
+
+        jTextField1311.setEditable(false);
+        jTextField1311.setDisabledTextColor(java.awt.Color.black);
+        jTextField1311.setEnabled(false);
+        jTextField1311.setHighlighter(null);
+
+        jTextField1302.setEditable(false);
+        jTextField1302.setDisabledTextColor(java.awt.Color.black);
+        jTextField1302.setEnabled(false);
+        jTextField1302.setHighlighter(null);
+
+        jTextField1313.setEditable(false);
+        jTextField1313.setDisabledTextColor(java.awt.Color.black);
+        jTextField1313.setEnabled(false);
+        jTextField1313.setHighlighter(null);
+
+        jTextField1305.setEditable(false);
+        jTextField1305.setDisabledTextColor(java.awt.Color.black);
+        jTextField1305.setEnabled(false);
+        jTextField1305.setHighlighter(null);
+
+        jTextField1315.setEditable(false);
+        jTextField1315.setDisabledTextColor(java.awt.Color.black);
+        jTextField1315.setEnabled(false);
+        jTextField1315.setHighlighter(null);
+
+        jTextField1308.setEditable(false);
+        jTextField1308.setDisabledTextColor(java.awt.Color.black);
+        jTextField1308.setEnabled(false);
+        jTextField1308.setHighlighter(null);
+
+        jTextField1307.setEditable(false);
+        jTextField1307.setDisabledTextColor(java.awt.Color.black);
+        jTextField1307.setEnabled(false);
+        jTextField1307.setHighlighter(null);
+
+        jTextField1317.setEditable(false);
+        jTextField1317.setDisabledTextColor(java.awt.Color.black);
+        jTextField1317.setEnabled(false);
+        jTextField1317.setHighlighter(null);
+
+        jTextField1406.setEditable(false);
+        jTextField1406.setDisabledTextColor(java.awt.Color.black);
+        jTextField1406.setEnabled(false);
+        jTextField1406.setHighlighter(null);
         jTextField1406.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1406ActionPerformed(evt);
             }
         });
 
+        jTextField1416.setEditable(false);
+        jTextField1416.setDisabledTextColor(java.awt.Color.black);
+        jTextField1416.setEnabled(false);
+        jTextField1416.setHighlighter(null);
+
+        jTextField1417.setEditable(false);
+        jTextField1417.setDisabledTextColor(java.awt.Color.black);
+        jTextField1417.setEnabled(false);
+        jTextField1417.setHighlighter(null);
+
+        jTextField1407.setEditable(false);
+        jTextField1407.setDisabledTextColor(java.awt.Color.black);
+        jTextField1407.setEnabled(false);
+        jTextField1407.setHighlighter(null);
+
+        jTextField1415.setEditable(false);
+        jTextField1415.setDisabledTextColor(java.awt.Color.black);
+        jTextField1415.setEnabled(false);
+        jTextField1415.setHighlighter(null);
+
+        jTextField1401.setEditable(false);
+        jTextField1401.setDisabledTextColor(java.awt.Color.black);
+        jTextField1401.setEnabled(false);
+        jTextField1401.setHighlighter(null);
+
+        jTextField1403.setEditable(false);
+        jTextField1403.setDisabledTextColor(java.awt.Color.black);
+        jTextField1403.setEnabled(false);
+        jTextField1403.setHighlighter(null);
+
+        jTextField1404.setEditable(false);
+        jTextField1404.setDisabledTextColor(java.awt.Color.black);
+        jTextField1404.setEnabled(false);
+        jTextField1404.setHighlighter(null);
+
+        jTextField1418.setEditable(false);
+        jTextField1418.setDisabledTextColor(java.awt.Color.black);
+        jTextField1418.setEnabled(false);
+        jTextField1418.setHighlighter(null);
+
+        jTextField1400.setEditable(false);
+        jTextField1400.setDisabledTextColor(java.awt.Color.black);
+        jTextField1400.setEnabled(false);
+        jTextField1400.setHighlighter(null);
         jTextField1400.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1400ActionPerformed(evt);
             }
         });
 
+        jTextField1413.setEditable(false);
+        jTextField1413.setDisabledTextColor(java.awt.Color.black);
+        jTextField1413.setEnabled(false);
+        jTextField1413.setHighlighter(null);
+
+        jTextField1408.setEditable(false);
+        jTextField1408.setDisabledTextColor(java.awt.Color.black);
+        jTextField1408.setEnabled(false);
+        jTextField1408.setHighlighter(null);
+
+        jTextField1409.setEditable(false);
+        jTextField1409.setDisabledTextColor(java.awt.Color.black);
+        jTextField1409.setEnabled(false);
+        jTextField1409.setHighlighter(null);
+
+        jTextField1412.setEditable(false);
+        jTextField1412.setDisabledTextColor(java.awt.Color.black);
+        jTextField1412.setEnabled(false);
+        jTextField1412.setHighlighter(null);
+
+        jTextField1419.setEditable(false);
+        jTextField1419.setDisabledTextColor(java.awt.Color.black);
+        jTextField1419.setEnabled(false);
+        jTextField1419.setHighlighter(null);
+
+        jTextField1405.setEditable(false);
+        jTextField1405.setDisabledTextColor(java.awt.Color.black);
+        jTextField1405.setEnabled(false);
+        jTextField1405.setHighlighter(null);
+
+        jTextField1402.setEditable(false);
+        jTextField1402.setDisabledTextColor(java.awt.Color.black);
+        jTextField1402.setEnabled(false);
+        jTextField1402.setHighlighter(null);
+
+        jTextField1414.setEditable(false);
+        jTextField1414.setDisabledTextColor(java.awt.Color.black);
+        jTextField1414.setEnabled(false);
+        jTextField1414.setHighlighter(null);
+
+        jTextField1410.setEditable(false);
+        jTextField1410.setDisabledTextColor(java.awt.Color.black);
+        jTextField1410.setEnabled(false);
+        jTextField1410.setHighlighter(null);
+
+        jTextField1411.setEditable(false);
+        jTextField1411.setDisabledTextColor(java.awt.Color.black);
+        jTextField1411.setEnabled(false);
+        jTextField1411.setHighlighter(null);
+
+        jTextField1514.setEditable(false);
+        jTextField1514.setDisabledTextColor(java.awt.Color.black);
+        jTextField1514.setEnabled(false);
+        jTextField1514.setHighlighter(null);
+
+        jTextField1506.setEditable(false);
+        jTextField1506.setDisabledTextColor(java.awt.Color.black);
+        jTextField1506.setEnabled(false);
+        jTextField1506.setHighlighter(null);
         jTextField1506.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1506ActionPerformed(evt);
             }
         });
 
+        jTextField1519.setEditable(false);
+        jTextField1519.setDisabledTextColor(java.awt.Color.black);
+        jTextField1519.setEnabled(false);
+        jTextField1519.setHighlighter(null);
+
+        jTextField1503.setEditable(false);
+        jTextField1503.setDisabledTextColor(java.awt.Color.black);
+        jTextField1503.setEnabled(false);
+        jTextField1503.setHighlighter(null);
+
+        jTextField1511.setEditable(false);
+        jTextField1511.setDisabledTextColor(java.awt.Color.black);
+        jTextField1511.setEnabled(false);
+        jTextField1511.setHighlighter(null);
+
+        jTextField1508.setEditable(false);
+        jTextField1508.setDisabledTextColor(java.awt.Color.black);
+        jTextField1508.setEnabled(false);
+        jTextField1508.setHighlighter(null);
+
+        jTextField1513.setEditable(false);
+        jTextField1513.setDisabledTextColor(java.awt.Color.black);
+        jTextField1513.setEnabled(false);
+        jTextField1513.setHighlighter(null);
+
+        jTextField1500.setEditable(false);
+        jTextField1500.setDisabledTextColor(java.awt.Color.black);
+        jTextField1500.setEnabled(false);
+        jTextField1500.setHighlighter(null);
         jTextField1500.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1500ActionPerformed(evt);
             }
         });
 
+        jTextField1509.setEditable(false);
+        jTextField1509.setDisabledTextColor(java.awt.Color.black);
+        jTextField1509.setEnabled(false);
+        jTextField1509.setHighlighter(null);
+
+        jTextField1501.setEditable(false);
+        jTextField1501.setDisabledTextColor(java.awt.Color.black);
+        jTextField1501.setEnabled(false);
+        jTextField1501.setHighlighter(null);
+
+        jTextField1510.setEditable(false);
+        jTextField1510.setDisabledTextColor(java.awt.Color.black);
+        jTextField1510.setEnabled(false);
+        jTextField1510.setHighlighter(null);
+
+        jTextField1505.setEditable(false);
+        jTextField1505.setDisabledTextColor(java.awt.Color.black);
+        jTextField1505.setEnabled(false);
+        jTextField1505.setHighlighter(null);
+
+        jTextField1516.setEditable(false);
+        jTextField1516.setDisabledTextColor(java.awt.Color.black);
+        jTextField1516.setEnabled(false);
+        jTextField1516.setHighlighter(null);
+
+        jTextField1507.setEditable(false);
+        jTextField1507.setDisabledTextColor(java.awt.Color.black);
+        jTextField1507.setEnabled(false);
+        jTextField1507.setHighlighter(null);
+
+        jTextField1512.setEditable(false);
+        jTextField1512.setDisabledTextColor(java.awt.Color.black);
+        jTextField1512.setEnabled(false);
+        jTextField1512.setHighlighter(null);
+
+        jTextField1515.setEditable(false);
+        jTextField1515.setDisabledTextColor(java.awt.Color.black);
+        jTextField1515.setEnabled(false);
+        jTextField1515.setHighlighter(null);
+
+        jTextField1502.setEditable(false);
+        jTextField1502.setDisabledTextColor(java.awt.Color.black);
+        jTextField1502.setEnabled(false);
+        jTextField1502.setHighlighter(null);
+
+        jTextField1517.setEditable(false);
+        jTextField1517.setDisabledTextColor(java.awt.Color.black);
+        jTextField1517.setEnabled(false);
+        jTextField1517.setHighlighter(null);
+
+        jTextField1518.setEditable(false);
+        jTextField1518.setDisabledTextColor(java.awt.Color.black);
+        jTextField1518.setEnabled(false);
+        jTextField1518.setHighlighter(null);
+
+        jTextField1504.setEditable(false);
+        jTextField1504.setDisabledTextColor(java.awt.Color.black);
+        jTextField1504.setEnabled(false);
+        jTextField1504.setHighlighter(null);
+
+        jTextField1617.setEditable(false);
+        jTextField1617.setDisabledTextColor(java.awt.Color.black);
+        jTextField1617.setEnabled(false);
+        jTextField1617.setHighlighter(null);
+
+        jTextField1612.setEditable(false);
+        jTextField1612.setDisabledTextColor(java.awt.Color.black);
+        jTextField1612.setEnabled(false);
+        jTextField1612.setHighlighter(null);
+
+        jTextField1616.setEditable(false);
+        jTextField1616.setDisabledTextColor(java.awt.Color.black);
+        jTextField1616.setEnabled(false);
+        jTextField1616.setHighlighter(null);
+
+        jTextField1605.setEditable(false);
+        jTextField1605.setDisabledTextColor(java.awt.Color.black);
+        jTextField1605.setEnabled(false);
+        jTextField1605.setHighlighter(null);
+
+        jTextField1615.setEditable(false);
+        jTextField1615.setDisabledTextColor(java.awt.Color.black);
+        jTextField1615.setEnabled(false);
+        jTextField1615.setHighlighter(null);
+
+        jTextField1618.setEditable(false);
+        jTextField1618.setDisabledTextColor(java.awt.Color.black);
+        jTextField1618.setEnabled(false);
+        jTextField1618.setHighlighter(null);
+
+        jTextField1607.setEditable(false);
+        jTextField1607.setDisabledTextColor(java.awt.Color.black);
+        jTextField1607.setEnabled(false);
+        jTextField1607.setHighlighter(null);
+
+        jTextField1600.setEditable(false);
+        jTextField1600.setDisabledTextColor(java.awt.Color.black);
+        jTextField1600.setEnabled(false);
+        jTextField1600.setHighlighter(null);
         jTextField1600.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1600ActionPerformed(evt);
             }
         });
 
+        jTextField1601.setEditable(false);
+        jTextField1601.setDisabledTextColor(java.awt.Color.black);
+        jTextField1601.setEnabled(false);
+        jTextField1601.setHighlighter(null);
+
+        jTextField1619.setEditable(false);
+        jTextField1619.setDisabledTextColor(java.awt.Color.black);
+        jTextField1619.setEnabled(false);
+        jTextField1619.setHighlighter(null);
+
+        jTextField1603.setEditable(false);
+        jTextField1603.setDisabledTextColor(java.awt.Color.black);
+        jTextField1603.setEnabled(false);
+        jTextField1603.setHighlighter(null);
+
+        jTextField1613.setEditable(false);
+        jTextField1613.setDisabledTextColor(java.awt.Color.black);
+        jTextField1613.setEnabled(false);
+        jTextField1613.setHighlighter(null);
+
+        jTextField1606.setEditable(false);
+        jTextField1606.setDisabledTextColor(java.awt.Color.black);
+        jTextField1606.setEnabled(false);
+        jTextField1606.setHighlighter(null);
         jTextField1606.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1606ActionPerformed(evt);
             }
         });
 
+        jTextField1609.setEditable(false);
+        jTextField1609.setDisabledTextColor(java.awt.Color.black);
+        jTextField1609.setEnabled(false);
+        jTextField1609.setHighlighter(null);
+
+        jTextField1602.setEditable(false);
+        jTextField1602.setDisabledTextColor(java.awt.Color.black);
+        jTextField1602.setEnabled(false);
+        jTextField1602.setHighlighter(null);
+
+        jTextField1614.setEditable(false);
+        jTextField1614.setDisabledTextColor(java.awt.Color.black);
+        jTextField1614.setEnabled(false);
+        jTextField1614.setHighlighter(null);
+
+        jTextField1604.setEditable(false);
+        jTextField1604.setDisabledTextColor(java.awt.Color.black);
+        jTextField1604.setEnabled(false);
+        jTextField1604.setHighlighter(null);
+
+        jTextField1610.setEditable(false);
+        jTextField1610.setDisabledTextColor(java.awt.Color.black);
+        jTextField1610.setEnabled(false);
+        jTextField1610.setHighlighter(null);
+
+        jTextField1611.setEditable(false);
+        jTextField1611.setDisabledTextColor(java.awt.Color.black);
+        jTextField1611.setEnabled(false);
+        jTextField1611.setHighlighter(null);
+
+        jTextField1608.setEditable(false);
+        jTextField1608.setDisabledTextColor(java.awt.Color.black);
+        jTextField1608.setEnabled(false);
+        jTextField1608.setHighlighter(null);
+
+        jTextField1712.setEditable(false);
+        jTextField1712.setDisabledTextColor(java.awt.Color.black);
+        jTextField1712.setEnabled(false);
+        jTextField1712.setHighlighter(null);
+
+        jTextField1700.setEditable(false);
+        jTextField1700.setDisabledTextColor(java.awt.Color.black);
+        jTextField1700.setEnabled(false);
+        jTextField1700.setHighlighter(null);
         jTextField1700.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1700ActionPerformed(evt);
             }
         });
 
+        jTextField1701.setEditable(false);
+        jTextField1701.setDisabledTextColor(java.awt.Color.black);
+        jTextField1701.setEnabled(false);
+        jTextField1701.setHighlighter(null);
+
+        jTextField1711.setEditable(false);
+        jTextField1711.setDisabledTextColor(java.awt.Color.black);
+        jTextField1711.setEnabled(false);
+        jTextField1711.setHighlighter(null);
+
+        jTextField1706.setEditable(false);
+        jTextField1706.setDisabledTextColor(java.awt.Color.black);
+        jTextField1706.setEnabled(false);
+        jTextField1706.setHighlighter(null);
         jTextField1706.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1706ActionPerformed(evt);
             }
         });
 
+        jTextField1709.setEditable(false);
+        jTextField1709.setDisabledTextColor(java.awt.Color.black);
+        jTextField1709.setEnabled(false);
+        jTextField1709.setHighlighter(null);
+
+        jTextField1707.setEditable(false);
+        jTextField1707.setDisabledTextColor(java.awt.Color.black);
+        jTextField1707.setEnabled(false);
+        jTextField1707.setHighlighter(null);
+
+        jTextField1714.setEditable(false);
+        jTextField1714.setDisabledTextColor(java.awt.Color.black);
+        jTextField1714.setEnabled(false);
+        jTextField1714.setHighlighter(null);
+
+        jTextField1705.setEditable(false);
+        jTextField1705.setDisabledTextColor(java.awt.Color.black);
+        jTextField1705.setEnabled(false);
+        jTextField1705.setHighlighter(null);
+
+        jTextField1703.setEditable(false);
+        jTextField1703.setDisabledTextColor(java.awt.Color.black);
+        jTextField1703.setEnabled(false);
+        jTextField1703.setHighlighter(null);
+
+        jTextField1710.setEditable(false);
+        jTextField1710.setDisabledTextColor(java.awt.Color.black);
+        jTextField1710.setEnabled(false);
+        jTextField1710.setHighlighter(null);
+
+        jTextField1716.setEditable(false);
+        jTextField1716.setDisabledTextColor(java.awt.Color.black);
+        jTextField1716.setEnabled(false);
+        jTextField1716.setHighlighter(null);
+
+        jTextField1708.setEditable(false);
+        jTextField1708.setDisabledTextColor(java.awt.Color.black);
+        jTextField1708.setEnabled(false);
+        jTextField1708.setHighlighter(null);
+
+        jTextField1719.setEditable(false);
+        jTextField1719.setDisabledTextColor(java.awt.Color.black);
+        jTextField1719.setEnabled(false);
+        jTextField1719.setHighlighter(null);
+
+        jTextField1704.setEditable(false);
+        jTextField1704.setDisabledTextColor(java.awt.Color.black);
+        jTextField1704.setEnabled(false);
+        jTextField1704.setHighlighter(null);
+
+        jTextField1702.setEditable(false);
+        jTextField1702.setDisabledTextColor(java.awt.Color.black);
+        jTextField1702.setEnabled(false);
+        jTextField1702.setHighlighter(null);
+
+        jTextField1713.setEditable(false);
+        jTextField1713.setDisabledTextColor(java.awt.Color.black);
+        jTextField1713.setEnabled(false);
+        jTextField1713.setHighlighter(null);
+
+        jTextField1717.setEditable(false);
+        jTextField1717.setDisabledTextColor(java.awt.Color.black);
+        jTextField1717.setEnabled(false);
+        jTextField1717.setHighlighter(null);
+
+        jTextField1718.setEditable(false);
+        jTextField1718.setDisabledTextColor(java.awt.Color.black);
+        jTextField1718.setEnabled(false);
+        jTextField1718.setHighlighter(null);
+
+        jTextField1715.setEditable(false);
+        jTextField1715.setDisabledTextColor(java.awt.Color.black);
+        jTextField1715.setEnabled(false);
+        jTextField1715.setHighlighter(null);
+
+        jTextField1811.setEditable(false);
+        jTextField1811.setDisabledTextColor(java.awt.Color.black);
+        jTextField1811.setEnabled(false);
+        jTextField1811.setHighlighter(null);
+
+        jTextField1806.setEditable(false);
+        jTextField1806.setDisabledTextColor(java.awt.Color.black);
+        jTextField1806.setEnabled(false);
+        jTextField1806.setHighlighter(null);
         jTextField1806.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1806ActionPerformed(evt);
             }
         });
 
+        jTextField1805.setEditable(false);
+        jTextField1805.setDisabledTextColor(java.awt.Color.black);
+        jTextField1805.setEnabled(false);
+        jTextField1805.setHighlighter(null);
+
+        jTextField1816.setEditable(false);
+        jTextField1816.setDisabledTextColor(java.awt.Color.black);
+        jTextField1816.setEnabled(false);
+        jTextField1816.setHighlighter(null);
+
+        jTextField1818.setEditable(false);
+        jTextField1818.setDisabledTextColor(java.awt.Color.black);
+        jTextField1818.setEnabled(false);
+        jTextField1818.setHighlighter(null);
+
+        jTextField1801.setEditable(false);
+        jTextField1801.setDisabledTextColor(java.awt.Color.black);
+        jTextField1801.setEnabled(false);
+        jTextField1801.setHighlighter(null);
+
+        jTextField1803.setEditable(false);
+        jTextField1803.setDisabledTextColor(java.awt.Color.black);
+        jTextField1803.setEnabled(false);
+        jTextField1803.setHighlighter(null);
+
+        jTextField1804.setEditable(false);
+        jTextField1804.setDisabledTextColor(java.awt.Color.black);
+        jTextField1804.setEnabled(false);
+        jTextField1804.setHighlighter(null);
+
+        jTextField1817.setEditable(false);
+        jTextField1817.setDisabledTextColor(java.awt.Color.black);
+        jTextField1817.setEnabled(false);
+        jTextField1817.setHighlighter(null);
+
+        jTextField1814.setEditable(false);
+        jTextField1814.setDisabledTextColor(java.awt.Color.black);
+        jTextField1814.setEnabled(false);
+        jTextField1814.setHighlighter(null);
+
+        jTextField1808.setEditable(false);
+        jTextField1808.setDisabledTextColor(java.awt.Color.black);
+        jTextField1808.setEnabled(false);
+        jTextField1808.setHighlighter(null);
+
+        jTextField1807.setEditable(false);
+        jTextField1807.setDisabledTextColor(java.awt.Color.black);
+        jTextField1807.setEnabled(false);
+        jTextField1807.setHighlighter(null);
+
+        jTextField1810.setEditable(false);
+        jTextField1810.setDisabledTextColor(java.awt.Color.black);
+        jTextField1810.setEnabled(false);
+        jTextField1810.setHighlighter(null);
+
+        jTextField1813.setEditable(false);
+        jTextField1813.setDisabledTextColor(java.awt.Color.black);
+        jTextField1813.setEnabled(false);
+        jTextField1813.setHighlighter(null);
+
+        jTextField1819.setEditable(false);
+        jTextField1819.setDisabledTextColor(java.awt.Color.black);
+        jTextField1819.setEnabled(false);
+        jTextField1819.setHighlighter(null);
+
+        jTextField1812.setEditable(false);
+        jTextField1812.setDisabledTextColor(java.awt.Color.black);
+        jTextField1812.setEnabled(false);
+        jTextField1812.setHighlighter(null);
+
+        jTextField1802.setEditable(false);
+        jTextField1802.setDisabledTextColor(java.awt.Color.black);
+        jTextField1802.setEnabled(false);
+        jTextField1802.setHighlighter(null);
+
+        jTextField1809.setEditable(false);
+        jTextField1809.setDisabledTextColor(java.awt.Color.black);
+        jTextField1809.setEnabled(false);
+        jTextField1809.setHighlighter(null);
+
+        jTextField1800.setEditable(false);
+        jTextField1800.setDisabledTextColor(java.awt.Color.black);
+        jTextField1800.setEnabled(false);
+        jTextField1800.setHighlighter(null);
         jTextField1800.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1800ActionPerformed(evt);
             }
         });
 
+        jTextField1815.setEditable(false);
+        jTextField1815.setDisabledTextColor(java.awt.Color.black);
+        jTextField1815.setEnabled(false);
+        jTextField1815.setHighlighter(null);
+
+        jTextField1915.setEditable(false);
+        jTextField1915.setDisabledTextColor(java.awt.Color.black);
+        jTextField1915.setEnabled(false);
+        jTextField1915.setHighlighter(null);
+
+        jTextField1900.setEditable(false);
+        jTextField1900.setDisabledTextColor(java.awt.Color.black);
+        jTextField1900.setEnabled(false);
+        jTextField1900.setHighlighter(null);
         jTextField1900.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1900ActionPerformed(evt);
             }
         });
 
+        jTextField1911.setEditable(false);
+        jTextField1911.setDisabledTextColor(java.awt.Color.black);
+        jTextField1911.setEnabled(false);
+        jTextField1911.setHighlighter(null);
+
+        jTextField1906.setEditable(false);
+        jTextField1906.setDisabledTextColor(java.awt.Color.black);
+        jTextField1906.setEnabled(false);
+        jTextField1906.setHighlighter(null);
         jTextField1906.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1906ActionPerformed(evt);
             }
         });
+
+        jTextField1905.setEditable(false);
+        jTextField1905.setDisabledTextColor(java.awt.Color.black);
+        jTextField1905.setEnabled(false);
+        jTextField1905.setHighlighter(null);
+
+        jTextField1916.setEditable(false);
+        jTextField1916.setDisabledTextColor(java.awt.Color.black);
+        jTextField1916.setEnabled(false);
+        jTextField1916.setHighlighter(null);
+
+        jTextField1918.setEditable(false);
+        jTextField1918.setDisabledTextColor(java.awt.Color.black);
+        jTextField1918.setEnabled(false);
+        jTextField1918.setHighlighter(null);
+
+        jTextField1901.setEditable(false);
+        jTextField1901.setDisabledTextColor(java.awt.Color.black);
+        jTextField1901.setEnabled(false);
+        jTextField1901.setHighlighter(null);
+
+        jTextField1903.setEditable(false);
+        jTextField1903.setDisabledTextColor(java.awt.Color.black);
+        jTextField1903.setEnabled(false);
+        jTextField1903.setHighlighter(null);
+
+        jTextField1904.setEditable(false);
+        jTextField1904.setDisabledTextColor(java.awt.Color.black);
+        jTextField1904.setEnabled(false);
+        jTextField1904.setHighlighter(null);
+
+        jTextField1913.setEditable(false);
+        jTextField1913.setDisabledTextColor(java.awt.Color.black);
+        jTextField1913.setEnabled(false);
+        jTextField1913.setHighlighter(null);
+
+        jTextField1910.setEditable(false);
+        jTextField1910.setDisabledTextColor(java.awt.Color.black);
+        jTextField1910.setEnabled(false);
+        jTextField1910.setHighlighter(null);
+
+        jTextField1912.setEditable(false);
+        jTextField1912.setDisabledTextColor(java.awt.Color.black);
+        jTextField1912.setEnabled(false);
+        jTextField1912.setHighlighter(null);
+
+        jTextField1919.setEditable(false);
+        jTextField1919.setDisabledTextColor(java.awt.Color.black);
+        jTextField1919.setEnabled(false);
+        jTextField1919.setHighlighter(null);
+
+        jTextField1909.setEditable(false);
+        jTextField1909.setDisabledTextColor(java.awt.Color.black);
+        jTextField1909.setEnabled(false);
+        jTextField1909.setHighlighter(null);
+
+        jTextField1902.setEditable(false);
+        jTextField1902.setDisabledTextColor(java.awt.Color.black);
+        jTextField1902.setEnabled(false);
+        jTextField1902.setHighlighter(null);
+
+        jTextField1917.setEditable(false);
+        jTextField1917.setDisabledTextColor(java.awt.Color.black);
+        jTextField1917.setEnabled(false);
+        jTextField1917.setHighlighter(null);
+
+        jTextField1914.setEditable(false);
+        jTextField1914.setDisabledTextColor(java.awt.Color.black);
+        jTextField1914.setEnabled(false);
+        jTextField1914.setHighlighter(null);
+
+        jTextField1908.setEditable(false);
+        jTextField1908.setDisabledTextColor(java.awt.Color.black);
+        jTextField1908.setEnabled(false);
+        jTextField1908.setHighlighter(null);
+
+        jTextField1907.setEditable(false);
+        jTextField1907.setDisabledTextColor(java.awt.Color.black);
+        jTextField1907.setEnabled(false);
+        jTextField1907.setHighlighter(null);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1981,6 +3942,7 @@ public class Input extends javax.swing.JFrame {
         this.setVisible(false);
         
         Input input = new Input();
+        input.addMouseListener(new MoreMouseEvents());
         input.addMouseMotionListener(new MouseMotionEvent());
         input.pack();
         input.setLocationRelativeTo(null);
